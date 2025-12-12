@@ -12,7 +12,7 @@ layout:
   pagination:
     visible: true
   metadata:
-    visible: true
+    visible: false
 ---
 
 # 그래스호퍼 - 개요

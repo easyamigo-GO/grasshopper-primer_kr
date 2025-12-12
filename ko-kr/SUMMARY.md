@@ -3,7 +3,7 @@
 * [소개](README.md)
   * [그래스호퍼 - 개요](0-about/1-grasshopper-an-overview.md)
   * [그래스호퍼의 활용](0-about/2-grasshopper-in-action.md)
-* [Foundations](1-foundations/1-foundations.md)
+* [기초](1-foundations/1-foundations.md)
   * [Hello Grasshopper!](1-foundations/1-1/0_hello-grasshopper.md)
     * [Installing and Launching Grasshopper](1-foundations/1-1/1_installing-and-launching-grasshopper.md)
     * [The Grasshopper UI](1-foundations/1-1/2_the-grasshopper-ui.md)
