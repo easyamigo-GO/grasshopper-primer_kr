@@ -2,7 +2,7 @@
 layout:
   width: default
   title:
-    visible: true
+    visible: false
   description:
     visible: false
   tableOfContents:
@@ -16,6 +16,8 @@ layout:
 ---
 
 # 그래스호퍼 - 개요
+
+## <mark style="color:$primary;">그래스호퍼 - 개요</mark>
 
 #### 그래스호퍼(Grasshopper)는 Robert McNeel & Associates의 데이비드 러튼(David Rutten)이 개발한 시각적 프로그래밍 에디터입니다. 라이노 3D(Rhino3D)의 플러그인인 그래스호퍼는 건축, 엔지니어링, 제품 디자인 등 다양한 분야의 크리에이티브 전문가들이 사용하는 강력하고 다재다능한 모델링 환경과 통합되어 있습니다. 그래스호퍼와 라이노는 직관적인 그래픽 인터페이스 내에서 모델을 정밀하게 파라메트릭 방식으로 제어하고, 생성적 디자인(Generative Design) 워크플로를 탐구하며, 더 높은 수준의 프로그래밍 로직을 개발할 수 있는 기회를 제공합니다.
 
