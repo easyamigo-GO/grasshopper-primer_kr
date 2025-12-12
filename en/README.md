@@ -29,7 +29,7 @@ layout:
 
 > 그래스호퍼(Grasshopper)는 라이노(Rhino)의 3D 모델링 도구와 긴밀하게 통합된 그래픽 알고리즘 에디터입니다. 이를 통해 디자이너는 단순한 형태부터 경이로운 수준의 형태에 이르기까지, 다양한 형태를 만들어내는 '폼 제너레이터(Form Generators)'를 구축할 수 있습니다.
 
-#### <mark style="color:$primary;">**환영합니다**</mark>
+### <mark style="color:$primary;">**환영합니다**</mark>
 
 여러분은 지금 그래스호퍼 입문서(Grasshopper Primer) 제3판을 펼치셨습니다. 이 입문서는 본래 Lift Architects의 앤드류 O. 페인(Andrew O. Payne)이 Rhino 4 및 Grasshopper 0.6.0007 버전을 위해 집필했던 것입니다. 당시 해당 버전의 출시는 이미 강력했던 그래스호퍼 플랫폼을 한 단계 도약시킨 거대한 업그레이드였습니다. 이제 우리는 그래스호퍼 개발의 또 다른 중요한 전환점에 서 있으며, 이에 따라 기존 입문서에 대한 업데이트가 절실히 필요했습니다. 우리는 이 업데이트된 웹 기반 입문서를 그래스호퍼 커뮤니티 멤버들이 기여한 수많은 훌륭한 자료 목록에 추가하게 되어 매우 기쁩니다.
 
@@ -49,7 +49,7 @@ layout:
 
 ***
 
-#### 그래스호퍼 입문서 프로젝트 (THE GRASSHOPPER PRIMER PROJECT)
+### <mark style="color:$primary;">**그래스호퍼 입문서 프로젝트 (THE GRASSHOPPER PRIMER PROJECT)**</mark>
 
 그래스호퍼 입문서는 밥 맥닐(Bob McNeel), 스콧 데이비슨(Scott Davidson), 그리고 [Robert McNeel & Associates](http://www.en.na.mcneel.com/)의 그래스호퍼 개발 팀에 의해 시작된 오픈 소스 프로젝트입니다.&#x20;
 
@@ -59,13 +59,13 @@ layout:
 
 이 프로젝트에 기여하고 싶으시다면, 깃허브(GitHub) 프로젝트 위키를 확인하여 시작해 보세요.(https://github.com/modelab/grasshopper-primer/wiki).
 
-#### 감사의 말
+### <mark style="color:$primary;">감사의 말</mark>
 
 끊임없는 영감과 그래스호퍼를 개척한 귀중한 노고에 대해 데이비드 러튼(David Rutten)에게 특별한 감사를 전합니다. 또한 이 작업의 시초가 된 자산을 제공해 준 앤드류 O. 페인(Andrew O. Payne)에게도 감사를 표합니다. 마지막으로, 지난 수년간 아낌없는 지원을 보내준 밥 맥닐(Bob McNeel)과 Robert McNeel & Associates의 모든 분께 깊이 감사드립니다.
 
 ***
 
-#### 필수 소프트웨어
+### <mark style="color:$primary;">필수 소프트웨어</mark>
 
 **Rhino5**
 
@@ -79,7 +79,7 @@ http://www.rhino3d.com/download/rhino/5/latest
 
 http://www.grasshopper3d.com/page/download-1
 
-**FORUMS**&#x20;
+### <mark style="color:$primary;">**FORUMS**</mark>&#x20;
 
 그래스호퍼 포럼은 매우 활발하며, 질문과 답변을 올리고 거의 모든 주제에 대해 도움을 얻을 수 있는 훌륭한 리소스입니다. 포럼은 일반 토론, 오류 및 버그, 샘플 및 예제, 자주 묻는 질문(FAQ) 카테고리로 구성되어 있습니다.
 
@@ -93,7 +93,7 @@ http://www.grasshopper3d.com/notes/index/allNotes
 
 http://discourse.mcneel.com/
 
-**LICENSING INFORMATION**
+### <mark style="color:$primary;">**LICENSING INFORMATION**</mark>
 
 The Grasshopper Primer is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported license. The full text of this license is available here:&#x20;
 
