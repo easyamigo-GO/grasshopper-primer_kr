@@ -1,12 +1,16 @@
 # About
 
-\#기초:  그래스호퍼 입문서 ##제3판 V3.3
+## <mark style="color:$primary;">The Grasshopper Primer (한국어)</mark> <a href="#the-grasshopper-primer-en" id="the-grasshopper-primer-en"></a>
+
+### <mark style="color:$primary;">Third Edition V3.3</mark> <a href="#third-edition-v3-3" id="third-edition-v3-3"></a>
 
 ![Primer Release Cover](.gitbook/assets/GHP3_5Pages.png)
 
 > 그래스호퍼(Grasshopper)는 라이노(Rhino)의 3D 모델링 도구와 긴밀하게 통합된 그래픽 알고리즘 에디터입니다. 이를 통해 디자이너는 단순한 형태부터 경이로운 수준의 형태에 이르기까지, 다양한 형태를 만들어내는 '폼 제너레이터(Form Generators)'를 구축할 수 있습니다.
 
-\###환영합니다 여러분은 지금 그래스호퍼 입문서(Grasshopper Primer) 제3판을 펼치셨습니다. 이 입문서는 본래 Lift Architects의 앤드류 O. 페인(Andrew O. Payne)이 Rhino 4 및 Grasshopper 0.6.0007 버전을 위해 집필했던 것입니다. 당시 해당 버전의 출시는 이미 강력했던 그래스호퍼 플랫폼을 한 단계 도약시킨 거대한 업그레이드였습니다. 이제 우리는 그래스호퍼 개발의 또 다른 중요한 전환점에 서 있으며, 이에 따라 기존 입문서에 대한 업데이트가 절실히 필요했습니다. 우리는 이 업데이트된 웹 기반 입문서를 그래스호퍼 커뮤니티 멤버들이 기여한 수많은 훌륭한 자료 목록에 추가하게 되어 매우 기쁩니다.
+#### <mark style="color:$primary;">환영합니다</mark>
+
+여러분은 지금 그래스호퍼 입문서(Grasshopper Primer) 제3판을 펼치셨습니다. 이 입문서는 본래 Lift Architects의 앤드류 O. 페인(Andrew O. Payne)이 Rhino 4 및 Grasshopper 0.6.0007 버전을 위해 집필했던 것입니다. 당시 해당 버전의 출시는 이미 강력했던 그래스호퍼 플랫폼을 한 단계 도약시킨 거대한 업그레이드였습니다. 이제 우리는 그래스호퍼 개발의 또 다른 중요한 전환점에 서 있으며, 이에 따라 기존 입문서에 대한 업데이트가 절실히 필요했습니다. 우리는 이 업데이트된 웹 기반 입문서를 그래스호퍼 커뮤니티 멤버들이 기여한 수많은 훌륭한 자료 목록에 추가하게 되어 매우 기쁩니다.
 
 이미 훌륭한 기초 자료를 바탕으로, 우리 Mode Lab 팀은 제3판의 디자인과 구성을 개발하는 작업에 착수했습니다. 이번 개정판은 가장 최신 그래스호퍼 빌드(버전 0.90076)에 대한 포괄적인 가이드를 제공하며, 우리가 생각하기에 가장 흥미로운 최신 기능 업데이트들을 강조하고 있습니다. 개정된 텍스트, 그래픽, 그리고 예제 파일들은 시각적 프로그래밍(Visual Programming)을 처음 접하는 완전한 초보자를 가르치는 것은 물론, 숙련된 베테랑에게는 제너레이티브 디자인(Generative Design) 워크플로우에 대한 빠른 소개를 제공하기 위해 기획되었습니다. 이 입문서가 창의적인 작업 과정에서 그래스호퍼의 활용법을 익히고자 하는 신규 및 기존 사용자들에게 유용한 현장 가이드가 되는 것이 우리의 목표입니다.
 
