@@ -1,14 +1,35 @@
+---
+layout:
+  width: default
+  title:
+    visible: false
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # About
 
-## <mark style="color:$primary;">The Grasshopper Primer (한국어)</mark> <a href="#the-grasshopper-primer-en" id="the-grasshopper-primer-en"></a>
+## <mark style="color:$primary;">**The Grasshopper Primer (한국어)**</mark> <a href="#the-grasshopper-primer-en" id="the-grasshopper-primer-en"></a>
 
-### <mark style="color:$primary;">Third Edition V3.3</mark> <a href="#third-edition-v3-3" id="third-edition-v3-3"></a>
+***
+
+### <mark style="color:$primary;">**Third Edition V3.3**</mark> <a href="#third-edition-v3-3" id="third-edition-v3-3"></a>
+
+***
 
 ![Primer Release Cover](.gitbook/assets/GHP3_5Pages.png)
 
 > 그래스호퍼(Grasshopper)는 라이노(Rhino)의 3D 모델링 도구와 긴밀하게 통합된 그래픽 알고리즘 에디터입니다. 이를 통해 디자이너는 단순한 형태부터 경이로운 수준의 형태에 이르기까지, 다양한 형태를 만들어내는 '폼 제너레이터(Form Generators)'를 구축할 수 있습니다.
 
-#### <mark style="color:$primary;">환영합니다</mark>
+#### <mark style="color:$primary;">**환영합니다**</mark>
 
 여러분은 지금 그래스호퍼 입문서(Grasshopper Primer) 제3판을 펼치셨습니다. 이 입문서는 본래 Lift Architects의 앤드류 O. 페인(Andrew O. Payne)이 Rhino 4 및 Grasshopper 0.6.0007 버전을 위해 집필했던 것입니다. 당시 해당 버전의 출시는 이미 강력했던 그래스호퍼 플랫폼을 한 단계 도약시킨 거대한 업그레이드였습니다. 이제 우리는 그래스호퍼 개발의 또 다른 중요한 전환점에 서 있으며, 이에 따라 기존 입문서에 대한 업데이트가 절실히 필요했습니다. 우리는 이 업데이트된 웹 기반 입문서를 그래스호퍼 커뮤니티 멤버들이 기여한 수많은 훌륭한 자료 목록에 추가하게 되어 매우 기쁩니다.
 
