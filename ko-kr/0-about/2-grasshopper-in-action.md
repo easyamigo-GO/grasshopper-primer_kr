@@ -1,6 +1,23 @@
-# Grasshopper in Action
+---
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
 
-[Follow the Grasshopper in Action board on Pinterest.](http://www.pinterest.com/modelabnyc/grasshopper-in-action/)
+# 그래스호퍼의 활용
+
+[Pinterest에서 'Grasshopper in Action' 보드를 팔로우하세요.](http://www.pinterest.com/modelabnyc/grasshopper-in-action/)
 
 {% if gitbook.generator == "pdf" or "mobi" or "epub" %}
 [![IMAGE](../.gitbook/assets/pinterest.png)](http://www.pinterest.com/modelabnyc/grasshopper-in-action/)
