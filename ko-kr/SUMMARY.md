@@ -1,7 +1,7 @@
 # Table of contents
 
 * [소개](README.md)
-  * [Grasshopper - an Overview](0-about/1-grasshopper-an-overview.md)
+  * [그래스호퍼 - 개요](0-about/1-grasshopper-an-overview.md)
   * [Grasshopper in Action](0-about/2-grasshopper-in-action.md)
 * [Foundations](1-foundations/1-foundations.md)
   * [Hello Grasshopper!](1-foundations/1-1/0_hello-grasshopper.md)

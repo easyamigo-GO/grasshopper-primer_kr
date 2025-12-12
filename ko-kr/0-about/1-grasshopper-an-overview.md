@@ -1,34 +1,51 @@
-# Grasshopper - an Overview
+---
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
 
-\#####Grasshopper is a visual programming editor developed by David Rutten at Robert McNeel & Associates. As a plug-in for Rhino3D, Grasshopper is integrated with the robust and versatile modeling environment used by creative professionals across a diverse range of fields, including architecture, engineering, product design, and more. In tandem, Grasshopper and Rhino offer us the opportunity to define precise parametric control over models, the capability to explore generative design workflows, and a platform to develop higher-level programming logic – all within an intuitive, graphical interface.
+# 그래스호퍼 - 개요
 
-The origins of Grasshopper can be traced to the functionality of Rhino3d Version 4’s “Record History” button. This built-in feature enabled users to store modeling procedures implicitly in the background as you go. If you lofted four curves with the recording on and then edited the control points of one of these curves, the surface geometry would update. Back in 2008, David posed the question: “what if you could have more explicit control over this history?” and the precursor to Grasshopper, Explicit History, was born. This exposed the history tree to editing in detail and empowered the user to develop logical sequences beyond the existing capabilities of Rhino3D’s built in features. Six years later, Grasshopper is now a robust visual programming editor that can be extended by suites of externally developed add-ons. Furthermore, it has fundamentally altered the workflows of professionals across multiple industries and fostered an active global community of users.
+#### 그래스호퍼(Grasshopper)는 Robert McNeel & Associates의 데이비드 러튼(David Rutten)이 개발한 시각적 프로그래밍 에디터입니다. 라이노 3D(Rhino3D)의 플러그인인 그래스호퍼는 건축, 엔지니어링, 제품 디자인 등 다양한 분야의 크리에이티브 전문가들이 사용하는 강력하고 다재다능한 모델링 환경과 통합되어 있습니다. 그래스호퍼와 라이노는 직관적인 그래픽 인터페이스 내에서 모델을 정밀하게 파라메트릭 방식으로 제어하고, 생성적 디자인(Generative Design) 워크플로를 탐구하며, 더 높은 수준의 프로그래밍 로직을 개발할 수 있는 기회를 제공합니다.
 
-This primer focuses on Foundations, offering the core knowledge you need to dive into regular use of Grasshopper and several on-ramps to how you might go further within your own creative practice. Before diving into the descriptions, diagrams, and examples supplied hereafter, let’s discuss what visual programming is, the basics of the Grasshopper interface and terminology, as well as the “live” characteristics of the viewport feedback and user experience.
+그래스호퍼의 기원은 라이노 3D 버전 4의 "히스토리 기록(Record History)" 버튼 기능으로 거슬러 올라갑니다. 이 내장 기능은 사용자가 모델링하는 과정을 백그라운드에 암시적으로 저장할 수 있게 해주었습니다. 예를 들어, 기록 기능을 켠 상태에서 4개의 커브를 로프트(Loft)한 뒤 그중 하나의 제어점을 수정하면, 서피스 지오메트리가 자동으로 업데이트되는 식이었습니다. 2008년, 데이비드는 "이 히스토리 기능을 좀 더 명시적으로 제어할 수 있다면 어떨까?"라는 질문을 던졌고, 그 결과 그래스호퍼의 전신인 'Explicit History'가 탄생했습니다. 이는 히스토리 트리를 세부적으로 편집할 수 있게 개방함으로써, 사용자가 라이노 3D의 기존 내장 기능을 넘어선 논리적 시퀀스를 개발할 수 있도록 힘을 실어주었습니다. 6년이 지난 지금, 그래스호퍼는 외부에서 개발된 다양한 애드온(Add-on) 제품군을 통해 확장 가능한 강력한 시각적 프로그래밍 에디터로 자리 잡았습니다. 더 나아가, 여러 산업 분야 전문가들의 워크플로를 근본적으로 변화시켰으며 활발한 글로벌 사용자 커뮤니티를 육성했습니다.
 
-Visual Programming is a paradigm of computer programming within which the user manipulates logic elements graphically instead of textually. Some of the most well-known textual programming languages such as C#, Visual Basic, Processing – and more close to home for Rhino – Python and Rhinoscript require us to write code that is bound by language-specific syntax. In contrast, visual programming allows us to connect functional blocks into a sequence of actions where the only “syntax” required is that the inputs of the blocks receive the data of the appropriate type, and ideally, that is organized according to the desired result – see the sections on Data Stream Matching and Designing with Data Trees. This characteristic of visual programming avoids the barrier to entry commonly found in trying to learn a new language, even a spoken one, as well as foregrounds the interface, which for designers locates Grasshopper within more familiar territory.
+이 입문서는 그래스호퍼를 본격적으로 사용하기 위해 필요한 핵심 지식을 제공하는 '기초(Foundations)'에 초점을 맞추고 있으며, 여러분의 창의적인 작업에서 이를 어떻게 더 발전시킬 수 있을지에 대한 몇 가지 진입로를 제공합니다. 앞으로 나올 설명, 다이어그램, 예제를 살펴보기 전에, 먼저 시각적 프로그래밍이란 무엇인지, 그래스호퍼 인터페이스와 용어의 기초, 그리고 뷰포트 피드백과 사용자 경험의 "라이브(live)" 특성에 대해 논의해 보겠습니다.
+
+시각적 프로그래밍(Visual Programming)은 사용자가 텍스트 대신 그래픽으로 논리 요소를 조작하는 컴퓨터 프로그래밍의 한 패러다임입니다. C#, 비주얼 베이직(Visual Basic), 프로세싱(Processing)과 같은 유명한 텍스트 기반 프로그래밍 언어나, 라이노 사용자에게 더 친숙한 파이썬(Python) 및 라이노스크립트(Rhinoscript)는 언어별 문법(syntax)에 얽매인 코드를 작성해야 합니다. 이와 대조적으로, 시각적 프로그래밍은 기능 블록을 연결하여 일련의 동작을 만듭니다. 여기서 요구되는 유일한 "문법"은 블록의 입력단에 적절한 유형의 데이터를 입력하는 것뿐이며, 이상적으로는 원하는 결과에 맞춰 데이터를 구성하는 것뿐입니다(데이터 스트림 매칭 및 데이터 트리 디자인 섹션 참조). 시각적 프로그래밍의 이러한 특성은 새로운 언어(심지어 구어체 언어일지라도)를 배울 때 흔히 겪는 진입 장벽을 없애주며, 디자이너에게 더욱 친숙한 영역인 인터페이스를 전면에 내세웁니다.
 
 ![IMAGE](../.gitbook/assets/python-and-gh-sine.png)
 
-> This image show the process for drawing a sine curve in python and in Grashopper.
+> 이 이미지는 파이썬(Python)과 그래스호퍼(Grasshopper)에서 사인 곡선을 그리는 과정을 보여줍니다.
 
-To access Grasshopper and its visual programming capabilities, we need to download and install the program from the Grasshopper3D.com website. Once installed, we can open the plug-in by typing “Grasshopper” into the Rhino Command Line. The first time we do so in a new session of Rhino, we will be presented with the Grasshopper loading prompt followed by the Grasshopper editor window. We can now add functional blocks called “components” to the “canvas,” connect them with “wires,” and save the entire “definition” in the .ghx file format.
+그래스호퍼와 그 시각적 프로그래밍 기능을 사용하려면, Grasshopper3D.com 웹사이트에서 프로그램을 다운로드하여 설치해야 합니다. 설치가 완료되면 라이노(Rhino) 명령행에 "Grasshopper"를 입력하여 플러그인을 열 수 있습니다. 라이노의 새 세션에서 처음 실행할 경우, 그래스호퍼 로딩 프롬프트가 뜬 후 에디터 창이 나타납니다. 이제 "컴포넌트(components)"라고 불리는 기능 블록을 "캔버스(canvas)"에 추가하고, 이들을 "와이어(wires)"로 연결한 뒤, 전체 "데피니션(definition)"을 .ghx 파일 형식으로 저장할 수 있습니다.
 
 ![IMAGE](../.gitbook/assets/gh-definition.png)
 
-> A Grasshopper definition, made up of components connected with wires on the canvas
+> 캔버스 위에서 와이어로 연결된 컴포넌트들로 구성된 그래스호퍼 데피니션
 
-Once we’ve started to develop a Grasshopper definition and created “slider” objects within our canvas to control geometry, we may naturally intuit the connection we’ve made between this input object to what we see in Rhino’s viewports. This connection is essentially live – if we adjust the grip on the slider, we will see the consequences in that, within our definition an input somewhere has changed and the program must be solved again to recompute a solution and display the update. To our benefit when getting started with using Grasshopper, the geometry preview we see is a lightweight representation of the solution and it automatically updates. It is important to take note this connection now as when your definitions become more complex, adeptly managing the flow of data, the status of the “solver,” and what is previewed in the Rhino viewport will prevent many unwanted headaches.
+일단 그래스호퍼 데피니션(Definition)을 개발하기 시작하고 캔버스 내에 지오메트리를 제어하기 위한 "슬라이더(slider)" 객체를 만들면, 우리는 이 입력 객체와 라이노 뷰포트에서 보이는 것 사이의 연결 관계를 자연스럽게 직관적으로 이해하게 됩니다. 이 연결은 본질적으로 "실시간(live)" 상태입니다. 슬라이더의 그립을 조정하면, 데피니션 내부 어딘가의 입력값이 변경되고, 프로그램이 솔루션을 다시 계산(Recompute)하여 업데이트된 결과를 표시하는 과정을 즉시 확인할 수 있습니다. 그래스호퍼를 처음 시작하는 사용자에게 다행스러운 점은, 우리가 보는 지오메트리 미리보기(Preview)가 솔루션의 가벼운(lightweight) 표현이며 자동으로 업데이트된다는 것입니다. 지금 이 연결 관계를 주목하는 것이 중요합니다. 데피니션이 점점 더 복잡해질수록 데이터의 흐름, "솔버(solver)"의 상태, 그리고 라이노 뷰포트에 미리보기되는 내용을 능숙하게 관리하는 것이 훗날 겪을 수 있는 많은 골치 아픈 문제들을 예방해 줄 것이기 때문입니다.
 
 ![IMAGE](../.gitbook/assets/flow.png)
 
-> Program flow from left to right
+> 프로그램 흐름은 왼쪽에서 오른쪽으로 진행됨
 
-\####THINGS TO REMEMBER
+#### 기억해야 할 점
 
-* Grasshopper is a graphical algorithm editor that is integrated with Rhino3D’s modeling tools.
-* Algorithms are step by step procedures designed to perform an operation.
-* You use Grasshopper to design algorithms that then automate tasks in Rhino3D.
-* An easy way to get started if you are unclear how to perform a specific operation in Grasshopper would be to try manually and incrementally creating an algorithm using Rhino commands.
+* 그래스호퍼는 라이노 3D의 모델링 도구와 통합된 그래픽 알고리즘 에디터입니다.
+* 알고리즘은 특정 작업을 수행하기 위해 설계된 단계별 절차입니다.
+* 여러분은 라이노 3D에서의 작업을 자동화하는 알고리즘을 설계하기 위해 그래스호퍼를 사용합니다.
+* 그래스호퍼에서 특정 작업을 어떻게 수행해야 할지 막막할 때 시작하기 좋은 방법은, 라이노 명령어를 사용하여 수동으로 점진적인 알고리즘을 만들어 보는 것입니다.
 
-As you begin first exploring Grasshopper or further building your skills, you have joined the global Grasshopper community, one that is full of active members from many fields, with diverse experience levels. The forum at Grasshopper3D. com is a useful resource for posing questions, sharing findings, and gaining knowledge. This is a community that we have held dear as we’ve written this primer and watched Grasshopper develop over the years. Welcome!
+여러분이 그래스호퍼를 처음 탐색하기 시작했든 혹은 기술을 더 발전시키고 있든 간에, 여러분은 이미 다양한 분야와 경험 수준을 가진 활동적인 멤버들로 가득 찬 글로벌 그래스호퍼 커뮤니티에 합류하셨습니다. Grasshopper3D.com 포럼은 질문을 올리고, 발견한 것을 공유하며, 지식을 얻을 수 있는 유용한 리소스입니다. 이곳은 우리가 이 입문서를 집필하고 지난 수년간 그래스호퍼가 발전하는 모습을 지켜보며 소중하게 여겨온 커뮤니티입니다. 환영합니다!
