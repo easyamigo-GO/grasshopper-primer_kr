@@ -2,9 +2,9 @@
 layout:
   width: default
   title:
-    visible: true
+    visible: false
   description:
-    visible: true
+    visible: false
   tableOfContents:
     visible: true
   outline:
@@ -12,13 +12,15 @@ layout:
   pagination:
     visible: true
   metadata:
-    visible: true
+    visible: false
 ---
 
-# Hello Grasshopper!
+# 1.1. 안녕 그래스호퍼!
 
-###
+## <mark style="color:$primary;">**1.1. 안녕 그래스호퍼!**</mark>
 
-### Grasshopper is a graphical algorithm editor that is integrated with Rhino3D’s modeling tools. You use Grasshopper to design algorithms that then automate tasks in Rhino3D.
+***
+
+### <mark style="color:$info;">Grasshopper is a graphical algorithm editor that is integrated with Rhino3D’s modeling tools. You use Grasshopper to design algorithms that then automate tasks in Rhino3D.</mark>
 
 ![IMAGE](../../.gitbook/assets/001_hello-grasshopper.png)
