@@ -21,10 +21,5 @@ layout:
 
 [Pinterest에서 'Grasshopper in Action' 보드를 팔로우하세요.](http://www.pinterest.com/modelabnyc/grasshopper-in-action/)
 
-[https://kr.pinterest.com/modelabdesign/grasshopper-modelling-techniques/](https://kr.pinterest.com/modelabdesign/grasshopper-modelling-techniques/)
+{% embed url="https://kr.pinterest.com/modelabdesign/grasshopper-modelling-techniques/" %}
 
-
-
-{% if gitbook.generator == "pdf" or "mobi" or "epub" %}
-[![IMAGE](../.gitbook/assets/pinterest.png)](http://www.pinterest.com/modelabnyc/grasshopper-in-action/)
-{% endif %}
