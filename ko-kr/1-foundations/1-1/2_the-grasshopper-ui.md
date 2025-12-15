@@ -27,7 +27,7 @@ layout:
 
 ![](../../.gitbook/assets/1-1-2_001-grasshopper-ui.png)
 
-> 1. 제목 표시줄&#x20;
+> 1. 윈도우제목 표시줄&#x20;
 > 2. 메인 메뉴 바
 > 3. 파일 브라우저 컨트롤
 > 4. 컴포넌트 팔레트
@@ -36,23 +36,25 @@ layout:
 > 7. 사각형 박스 그리드로 표시된 이 영역은 최근에 액세스한 파일을 여는 인터페이스를 제공합니다. 3x3 메뉴는 가장 최근에 액세스한 파일(시간순)을 보여주며, 파일을 찾을 수 없는 경우(파일을 새 폴더로 옮기거나 삭제한 경우) 빨간색 사각형 박스로 표시됩니다.
 > 8. 상태 표시줄은 현재 컴퓨터에 설치된 그래스호퍼 버전을 알려줍니다. 새 버전을 사용할 수 있는 경우, 최신 버전을 다운로드하는 방법에 대한 지침을 제공하는 팝업 메뉴가 트레이에 나타납니다.
 
-####
+#### 1.1.2.1. 윈도우 제목 표시줄
 
-The Editor Window title bar behaves differently from most other dialogs in Microsoft Windows. If the window is not minimized or maximized, double clicking the title bar will collapse the dialog into a minimized bar on your screen. This is a great way to switch between the plug-in and Rhino because it minimizes the Editor without moving it to the bottom of the screen or behind other windows. Note that if you close the Editor, the Grasshopper geometry preview in the Rhino viewport will disappear, but the file won’t actually be closed. The next time you run the “Grasshopper” command in the Rhino dialog box, the window will come back in the same state with the same files loaded. This is because once it is launched from the command prompt, your session of Grasshopper stays active until that instance of Rhino is closed.
+에디터 윈도우 제목 표시줄은 마이크로소프트 윈도우의 다른 대화 상자들과 다르게 작동합니다. 창이 최소화되거나 최대화되지 않은 상태에서 제목 표시줄을 더블 클릭하면, 대화 상자가 화면상의 최소화된 막대 형태로 접힙니다(collapse). 이는 에디터를 화면 하단으로 이동시키거나 다른 창 뒤로 숨기지 않고도 최소화할 수 있어, 플러그인과 라이노 사이를 전환하는 훌륭한 방법입니다.
 
-#### 1.1.2.2. MAIN MENU BAR
+#### 1.1.2.2. 메인 메뉴 바
 
-The title bar is similar to typical Windows menus, except for the file browser control on the right (see next section). The File menu provides typical functions (eg. New File, Open, Save, etc.) in addition to a few utility tools which let you export images of your current Grasshopper document (see Export Quick Image and Export Hi-Res Image). You can control different aspects of the user interface using the View and Display menus, while the Solution menu lets you manage different attributes about how the solver computes the graph solution.
+메인 메뉴 바는 오른쪽에 있는 파일 브라우저 컨트롤(다음 섹션 참조)을 제외하면 일반적인 윈도우 메뉴와 유사합니다. File(파일) 메뉴는 일반적인 기능(예: 새 파일, 열기, 저장 등) 외에도 현재 그래스호퍼 문서의 이미지를 내보낼 수 있는 몇 가지 유틸리티 도구(Export Quick Image 및 Export Hi-Res Image 참조)를 제공합니다. View(뷰) 및 Display(표시) 메뉴를 사용하여 사용자 인터페이스의 다양한 측면을 제어할 수 있으며, Solution(솔루션) 메뉴를 사용하면 솔버가 그래프 솔루션을 계산하는 방식에 대한 다양한 속성을 관리할 수 있습니다.
 
-It is worth noting that many application settings can be controlled through the Preferences dialog box found under the File menu. The Author section allows you to set personal metadata which will be stored with each Grasshopper document while the Display section gives you fine grain control over the look and feel of the interface. The Files section lets you specify things like how often and where to store automatically saved file (in case the application is inadvertently closed or crashes). Finally, the Solver section lets you manage core and third-party plugins which can extend functionality.
+File 메뉴 아래에 있는 Preferences(환경설정) 대화 상자를 통해 많은 애플리케이션 설정을 제어할 수 있다는 점을 주목할 필요가 있습니다. Author(작성자) 섹션에서는 각 그래스호퍼 문서와 함께 저장될 개인 메타데이터를 설정할 수 있으며, Display(표시) 섹션에서는 인터페이스의 모양과 느낌을 세밀하게 제어할 수 있습니다. Files(파일) 섹션에서는 애플리케이션이 의도치 않게 종료되거나 충돌할 경우를 대비하여 자동 저장 파일의 저장 주기와 위치 등을 지정할 수 있습니다. 마지막으로 Solver(솔버) 섹션에서는 기능을 확장할 수 있는 코어 및 타사 플러그인을 관리할 수 있습니다.
 
-> Note: Be careful when using shortcuts since they are handled by the active window which could either be Rhino, the Grasshopper canvas or any other window inside Rhino. It is quite easy to use a shortcut command, only to realize that you had the wrong active window selected and accidentally invoked the wrong command.
+> 주의: 단축키를 사용할 때는 주의해야 합니다. 단축키는 현재 활성화된 창(Rhino, Grasshopper 캔버스 또는 Rhino 내의 다른 창)에 따라 처리되기 때문입니다. 단축키를 사용하다가 실수로 잘못된 창이 선택된 상태에서 잘못된 명령을 실행하는 경우가 발생할 수 있습니다.
 
-![IMAGE](../../.gitbook/assets/1-1-2_002-settings.png)
+![](../../.gitbook/assets/1-1-2_002-settings.png)
 
-> The Preferences dialog allows you to set many of Grasshopper’s application settings.
+> Preferences dialog(환경설정 대화 상자)를 사용하면 Grasshopper의 다양한 애플리케이션 설정을 지정할 수 있습니다.
 
-\####1.1.2.3. FILE BROWSER CONTROL The File Browser allows you to quickly switch between different loaded files by selecting them through this drop-down list. Accessing your open files through the File Browser drop-down list enables you to quickly copy and paste items from open definitions. Just click on the active file name in the browser control window and a cascading list of all open files will be displayed (along with a small thumbnail picture of each open definition) for easy access. You can also hit Alt+Tab to quickly switch between any open Grasshopper documents.
+#### 1.1.2.3. FILE BROWSER CONTROL
+
+The File Browser allows you to quickly switch between different loaded files by selecting them through this drop-down list. Accessing your open files through the File Browser drop-down list enables you to quickly copy and paste items from open definitions. Just click on the active file name in the browser control window and a cascading list of all open files will be displayed (along with a small thumbnail picture of each open definition) for easy access. You can also hit Alt+Tab to quickly switch between any open Grasshopper documents.
 
 Of course, you can go through the standard Open File dialog to load any Grasshopper document, although you can also drag and drop any Grasshopper file onto the canvas to load a particular definition.
 
