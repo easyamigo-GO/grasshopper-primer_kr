@@ -1,26 +1,48 @@
-# The Grasshopper UI
+---
+layout:
+  width: default
+  title:
+    visible: false
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
 
-\#####Grasshopper’s visual “plug-and-play” style gives designers the ability to combine creative problem solving with novel rule systems through the use of a fluid graphical interface.
+# 1.1.2. 그래스호퍼 UI
 
-Let’s start by exploring Grasshopper’s user interface UI. Grasshopper is a visual programming application where you are able to create programs, called definitions or documents, by dragging components onto the main editing window (called the canvas). The outputs to these components are connected to the inputs of subsequent components — creating a graph of information which can be read from left to right. Let’s get started with the basics.
+## <mark style="color:$primary;">1.1.2. 그래스호퍼 UI</mark>
 
-Assuming you’ve already installed the Grasshopper plugin (see F.0.0), type the word “Grasshopper” in the Rhino command prompt to display the Grasshopper Editor. The Grasshopper interface contains a number of elements, most of which will be very familiar to Rhino users. Let’s look at a few features of the interface.
+#### 그래스호퍼의 시각적인 "플러그 앤 플레이(plug-and-play)" 방식은 디자이너가 유연한 그래픽 인터페이스를 통해, 창의적인 문제 해결 능력과 새로운 규칙 체계를 결합할 수 있게 해 줍니다
 
-![IMAGE](../../.gitbook/assets/1-1-2_001-grasshopper-ui.png)
+먼저 그래스호퍼의 사용자 인터페이스(UI)를 살펴보는 것으로 시작해 봅시다. 그래스호퍼는 메인 편집 창(이를 '**캔버스**'라고 부릅니다) 위에 **컴포넌트**를 드래그하여, "데피니션(definitions)" 또는 "문서(documents)"라고 불리는 프로그램을 만들 수 있는 시각적 프로그래밍 애플리케이션입니다. 이 컴포넌트들의 출력(outputs)은 후속 컴포넌트의 입력(inputs)으로 연결되어, 왼쪽에서 오른쪽으로 흐르는 정보의 그래프를 생성합니다. 이제 기초부터 시작해 보겠습니다.
 
-> 1. Windows title bar.
+이미 그래스호퍼 플러그인을 설치했다고 가정하고(F.0.0 참조), 라이노 명령 프롬프트에 "Grasshopper"를 입력하여 그래스호퍼 에디터를 실행해 보세요. 그래스호퍼 인터페이스는 다양한 요소들을 포함하고 있는데, 그중 대부분은 라이노 사용자들에게 매우 친숙할 것입니다. 이제 인터페이스의 몇 가지 특징을 살펴보겠습니다.
 
-2. Main menu bar.
-3. File browser control.
-4. Component palettes.
-5. Canvas toolbar.
-6. Canvas.
-7. This area, indicated by a grid of rectangular boxes, provides an interface with which to open recently accessed file. The 3x3 menu shows the files most recently accessed (chronologically) and will display a red rectangular box if the file cannot be found (which can occur if you move a file to a new folder or delete it).
-8. The status bar tells you what version of Grasshopper is currently installed on your machine. If a newer version is available, a pop-up menu will appear in your tray providing instructions on how to download the latest version.
+![](../../.gitbook/assets/1-1-2_001-grasshopper-ui.png)
 
-\####1.1.2.1. THE WINDOWS TITLE BAR The Editor Window title bar behaves differently from most other dialogs in Microsoft Windows. If the window is not minimized or maximized, double clicking the title bar will collapse the dialog into a minimized bar on your screen. This is a great way to switch between the plug-in and Rhino because it minimizes the Editor without moving it to the bottom of the screen or behind other windows. Note that if you close the Editor, the Grasshopper geometry preview in the Rhino viewport will disappear, but the file won’t actually be closed. The next time you run the “Grasshopper” command in the Rhino dialog box, the window will come back in the same state with the same files loaded. This is because once it is launched from the command prompt, your session of Grasshopper stays active until that instance of Rhino is closed.
+> 1. 제목 표시줄&#x20;
+> 2. 메인 메뉴 바
+> 3. 파일 브라우저 컨트롤
+> 4. 컴포넌트 팔레트
+> 5. 캔버스 툴바
+> 6. 캔버스
+> 7. 사각형 박스 그리드로 표시된 이 영역은 최근에 액세스한 파일을 여는 인터페이스를 제공합니다. 3x3 메뉴는 가장 최근에 액세스한 파일(시간순)을 보여주며, 파일을 찾을 수 없는 경우(파일을 새 폴더로 옮기거나 삭제한 경우) 빨간색 사각형 박스로 표시됩니다.
+> 8. 상태 표시줄은 현재 컴퓨터에 설치된 그래스호퍼 버전을 알려줍니다. 새 버전을 사용할 수 있는 경우, 최신 버전을 다운로드하는 방법에 대한 지침을 제공하는 팝업 메뉴가 트레이에 나타납니다.
 
-\####1.1.2.2. MAIN MENU BAR The title bar is similar to typical Windows menus, except for the file browser control on the right (see next section). The File menu provides typical functions (eg. New File, Open, Save, etc.) in addition to a few utility tools which let you export images of your current Grasshopper document (see Export Quick Image and Export Hi-Res Image). You can control different aspects of the user interface using the View and Display menus, while the Solution menu lets you manage different attributes about how the solver computes the graph solution.
+####
+
+The Editor Window title bar behaves differently from most other dialogs in Microsoft Windows. If the window is not minimized or maximized, double clicking the title bar will collapse the dialog into a minimized bar on your screen. This is a great way to switch between the plug-in and Rhino because it minimizes the Editor without moving it to the bottom of the screen or behind other windows. Note that if you close the Editor, the Grasshopper geometry preview in the Rhino viewport will disappear, but the file won’t actually be closed. The next time you run the “Grasshopper” command in the Rhino dialog box, the window will come back in the same state with the same files loaded. This is because once it is launched from the command prompt, your session of Grasshopper stays active until that instance of Rhino is closed.
+
+#### 1.1.2.2. MAIN MENU BAR
+
+The title bar is similar to typical Windows menus, except for the file browser control on the right (see next section). The File menu provides typical functions (eg. New File, Open, Save, etc.) in addition to a few utility tools which let you export images of your current Grasshopper document (see Export Quick Image and Export Hi-Res Image). You can control different aspects of the user interface using the View and Display menus, while the Solution menu lets you manage different attributes about how the solver computes the graph solution.
 
 It is worth noting that many application settings can be controlled through the Preferences dialog box found under the File menu. The Author section allows you to set personal metadata which will be stored with each Grasshopper document while the Display section gives you fine grain control over the look and feel of the interface. The Files section lets you specify things like how often and where to store automatically saved file (in case the application is inadvertently closed or crashes). Finally, the Solver section lets you manage core and third-party plugins which can extend functionality.
 

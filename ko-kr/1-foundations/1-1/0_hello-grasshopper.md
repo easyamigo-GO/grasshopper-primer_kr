@@ -21,6 +21,6 @@ layout:
 
 ***
 
-### <mark style="color:$info;">Grasshopper is a graphical algorithm editor that is integrated with Rhino3D’s modeling tools. You use Grasshopper to design algorithms that then automate tasks in Rhino3D.</mark>
+#### 그래스호퍼(Grasshopper)는 라이노 3D(Rhino3D)의 모델링 도구와 통합된 그래픽 알고리즘 에디터입니다. 여러분은 그래스호퍼를 사용하여 알고리즘을 설계하고, 이를 통해 라이노 3D에서의 작업을 자동화할 수 있습니다.
 
 ![IMAGE](../../.gitbook/assets/001_hello-grasshopper.png)
