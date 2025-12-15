@@ -1,9 +1,9 @@
 # Table of contents
 
 * [소개](README.md)
-  * [그래스호퍼 - 개요](0-about/1-grasshopper-an-overview.md)
-  * [그래스호퍼의 활용](0-about/2-grasshopper-in-action.md)
-* [기초](1-foundations/1-foundations.md)
+  * [0.1. 그래스호퍼 - 개요](0-about/1-grasshopper-an-overview.md)
+  * [0.2. 그래스호퍼의 활용](0-about/2-grasshopper-in-action.md)
+* [1.0 기초](1-foundations/1-foundations.md)
   * [1.1. 안녕 그래스호퍼!](1-foundations/1-1/0_hello-grasshopper.md)
     * [1.1.1. 그래스호퍼 설치 및 실행](1-foundations/1-1/1_installing-and-launching-grasshopper.md)
     * [1.1.2. 그래스호퍼 UI](1-foundations/1-1/2_the-grasshopper-ui.md)

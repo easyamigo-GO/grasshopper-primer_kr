@@ -2,7 +2,7 @@
 layout:
   width: default
   title:
-    visible: false
+    visible: true
   description:
     visible: false
   tableOfContents:
@@ -15,7 +15,7 @@ layout:
     visible: false
 ---
 
-# 그래스호퍼의 활용
+# 0.2. 그래스호퍼의 활용
 
 ## <mark style="color:$primary;">그래스호퍼의 활용</mark>
 
