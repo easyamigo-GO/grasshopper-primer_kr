@@ -52,145 +52,156 @@ File 메뉴 아래에 있는 Preferences(환경설정) 대화 상자를 통해 �
 
 > Preferences dialog(환경설정 대화 상자)를 사용하면 Grasshopper의 다양한 애플리케이션 설정을 지정할 수 있습니다.
 
-#### 1.1.2.3. FILE BROWSER CONTROL
+#### 1.1.2.3. 파일 브라우저 컨트롤
 
-The File Browser allows you to quickly switch between different loaded files by selecting them through this drop-down list. Accessing your open files through the File Browser drop-down list enables you to quickly copy and paste items from open definitions. Just click on the active file name in the browser control window and a cascading list of all open files will be displayed (along with a small thumbnail picture of each open definition) for easy access. You can also hit Alt+Tab to quickly switch between any open Grasshopper documents.
+파일 브라우저(File Browser)를 사용하면 드롭다운 목록을 통해 현재 로드된 여러 파일 사이를 빠르게 전환할 수 있습니다. 파일 브라우저 드롭다운 목록을 통해 열려 있는 파일에 액세스하면, 열려 있는 데피니션(definitions) 간에 항목을 빠르게 복사하고 붙여넣을 수 있어 편리합니다. 브라우저 컨트롤 창에서 활성 파일 이름을 클릭하기만 하면, 쉽게 액세스할 수 있도록 모든 열린 파일의 목록이 (각 데피니션의 작은 썸네일 사진과 함께) 계단식으로 표시됩니다. 또한 **Alt+Tab** 키를 눌러 열려 있는 그래스호퍼 문서 간에 빠르게 전환할 수도 있습니다.
 
-Of course, you can go through the standard Open File dialog to load any Grasshopper document, although you can also drag and drop any Grasshopper file onto the canvas to load a particular definition.
+또한 파일 열기(Open File)' 를 통해 그래스호퍼 문서를 로드할 수도 있고, 그래스호퍼 파일을 캔버스 위로 드래그 앤 드롭하여 특정 데피니션을 로드하는 것도 가능합니다.
 
-> Grasshopper is a plug-in that works “on-top” of Rhino and as such has its own file types. The default file type is a binary data file, saved with an extension of .gh. The other file type is known as a Grasshopper XML file, which uses the extension .ghx. The XML (Extensible Markup Language) file type uses tags to define objects and object attributes (much like an .HTML document) but uses custom tags to define objects and the data within each object. Because XML files are formatted as textdocuments, you could open up any Grasshopper XML file in a text editor like NotePad to see the coding that is going on behind the scenes.
+> 그래스호퍼는 라이노 "위에서(on-top)" 작동하는 플러그인이므로  별도의 고유한 파일 형식을 가지고 있습니다. 기본 파일 형식은 .gh 확장자로 저장되는 바이너리 데이터 파일입니다. 다른 하나는 그래스호퍼 XML 파일로 알려져 있으며 .ghx 확장자를 사용합니다. XML(Extensible Markup Language) 파일 형식은 객체와 객체 속성을 정의하기 위해 태그를 사용하는데(마치 .HTML 문서와  같이), 각 객체와 그 안의 데이터를 정의하기 위해 사용자 지정 태그를 사용합니다. XML 파일은 텍스트 문서로 작성되기 때문에, 메모장(NotePad) 같은 텍스트 편집기에서 그래스호퍼 XML 파일을 열어 어떤 코딩이 이루어지고 있는지 확인할 수 있습니다.
 
-Grasshopper has several different methods by which it can open a file, and you will need to specify which option you would like to use when using this method.
+그래스호퍼에는 파일을 여는 여러 가지 방법이 있으며, 이 방법(드래그앤드롭)을 사용할 때 어떤 옵션을 사용할지 지정해야 합니다.&#x20;
 
-**Open File:** As the name suggests, this file option will simply open any definition that you drag and drop onto the canvas.
+**Open File (파일 열기):** 이름 그대로, 캔버스에 드래그 앤 드롭한 데피니션을 단순히 엽니다.
 
-**Insert File:** You can use this option to insert an existing file into the current document as loose components.
+**Insert File(파일 삽입):** 이 옵션을 사용하면 기존 파일을 현재 문서에 개별(loose) 컴포넌트 상태로 삽입합니다.
 
-**Group File:** This method will insert a file into an existing document, but will group all of the objects together.
+**Group File(파일 그룹화):** 이 방법은 파일을 기존 문서에 삽입하되, 모든 객체를 하나의 그룹으로 묶습니다.
 
-**Cluster File:** Similar to the group function, this method will insert a file into an existing document, but will create a cluster object for the entire group of objects.
+**Cluster File(파일 클러스터화):** 그룹 기능과 유사하지만, 이 방법은 파일을 기존 문서에 삽입하면서 전체 객체 그룹을 하나의 클러스터(cluster) 객체로 만듭니다.
 
-**Examine File:** Allows you to open a file in a locked state, meaning you can look around a particular file but you can’t make any changes to the definition.
+**Examine File(파일 검토):** 파일을 잠긴 상태(locked state)로 엽니다. 즉, 특정 파일을 둘러볼 수는 있지만 데피니션을 수정할 수는 없습니다.
 
-Grasshopper also has an Autosave feature which will be triggered periodically based on specific user actions. A list of Autosave preferences can be found under the File menu on the Main Menu Bar. When the active instance of Rhino is closed, a pop-up dialog box will appear asking whether or not you want to save any Grasshopper files that were open when Rhino was shut down.
+그래스호퍼에는 특정 사용자 작업을 기반으로 주기적으로 작동하는 자동 저장(Autosave) 기능도 있습니다. 자동 저장 설정 목록은 메인 메뉴 바의 File 메뉴에서 찾을 수 있습니다. 활성화된 라이노 인스턴스가 종료될 때, 라이노가 종료될 당시 열려 있던 그래스호퍼 파일을 저장할지 여부를 묻는 팝업 대화 상자가 나타납니다.
 
-> Autosave only works if the file has already been saved at least once.
+> 자동 저장 기능은 파일이 최소 한 번 이상 저장된 경우에만 작동합니다.
 
 ![IMAGE](../../.gitbook/assets/1-1-2_003-autosave.png)
 
-> Drag and Drop Files onto the Canvas.
+> 파일을 캔버스 위로 드래그 앤 드롭 하세요.
 
-\####1.1.2.4. COMPONENT PALETTES This area organizes components into categories and sub-categories. Categories are displayed as tabs, and subcategories are displayed as drop-down panels. All components belong to a certain category. These categories have been labeled to help you find the specific component that you are looking for (e.g. “Params” for all primitive data types or “Curves” for all curve related tools). To add a component to the canvas, you can either click on the objects in the drop-down menu or you can drag the component directly from the menu onto the canvas.
+#### 1.1.2.4. 컴포넌트 팔레트
 
-![IMAGE](../../.gitbook/assets/1-1-2_004-component-palette.png)
+이 영역은 컴포넌트를 카테고리(categories)와 서브 카테고리(sub-categories)로 정리합니다. 카테고리는 탭으로 표시되고, 서브 카테고리는 드롭다운 패널로 표시됩니다. 모든 컴포넌트는 특정 카테고리에 속합니다. 이러한 카테고리는 여러분이 찾고 있는 특정 컴포넌트를 쉽게 찾을 수 있도록 라벨이 붙어 있습니다 (예: 모든 기본 데이터 유형은 "Params", 모든 커브 관련 도구는 "Curves"). 캔버스에 컴포넌트를 추가하려면 드롭다운 메뉴에 있는 객체를 클릭하거나, 메뉴에서 컴포넌트를 직접 캔버스로 드래그하면 됩니다.
 
-> Drag + Drop a component from the palette to add a component to the canvas.
+![](../../.gitbook/assets/1-1-2_004-component-palette.png)
 
-Since there can be many more components in each sub-category than will fit into the palette, a limited number of icons are displayed on each panel. The height of the component palette and the width of the Grasshopper window can be adjusted to display more or fewer components per sub-category. To see a menu of all of the components in a given sub-category, simply click on the black bar at the bottom of each sub-category panel. This will open a dropdown menu which provides access to all components in that sub-category.
+> 팔레트에서 컴포넌트를 드래그 앤 드롭하여 캔버스에 추가합니다.
 
-![IMAGE](../../.gitbook/assets/1-1-2_005-subcategories.png)
+각 서브 카테고리에는 팔레트에 한 번에 표시할 수 있는 것보다 훨씬 많은 컴포넌트가 있을 수 있으므로, 각 패널에는 제한된 수의 아이콘만 표시됩니다. 컴포넌트 팔레트의 높이와 그래스호퍼 창의 너비를 조절하여 서브 카테고리당 표시되는 컴포넌트의 수를 늘리거나 줄일 수 있습니다. 특정 서브 카테고리에 있는 모든 컴포넌트 메뉴를 보려면, 각 서브 카테고리 패널 하단에 있는 검은색 바(bar)를 클릭하기만 하면 됩니다. 그러면 해당 서브 카테고리의 모든 컴포넌트에 접근할 수 있는 드롭다운 메뉴가 열립니다.
 
-> 1. Catgory tab
+![](../../.gitbook/assets/1-1-2_005-subcategories.png)
 
-2. Sub-category panel.
-3. Click the black bar to open the sub-category panel menu.
-4. Hover your mouse over a component for a short description.
-5. Drop-down menu.
+> 1. 카테고리&#x20;
+> 2. 서브 카테고리 패널
+> 3. 검은색 바를 클릭하여 서브 카테고리 패널 메뉴 열기
+> 4. 컴포넌트 위에 마우스를 올려 짧은 설명보기
+> 5. 드롭다운 메뉴
 
-\####1.1.2.5. THE CANVAS The canvas is the primary workspace for creating Grasshopper definitions. It is here where you interact with the elements of your visual program. You can start working in the canvas by placing components and connecting wires.
+#### 1.1.2.5. 캔버스 (CANVAS)
 
-\####1.1.2.6. GROUPING Grouping components together on the canvas can be especially useful for readability and comprehensibility. Grouping allows you the ability to quickly select and move multiple components around the canvas. You can create a group by typing Ctrl+G with the desired components selected. An alternate method can be found by using the “Group Selection” button under the Edit Menu on the Main Menu Bar. Custom parameters for group color, transparency, name, and outline type can be defined by right-clicking on any group object.
+캔버스는 그래스호퍼 데피니션을 생성하기 위한 주 작업 공간입니다. 여러분은 이곳에서 시각적 프로그램의 요소들과 상호작용하게 됩니다. 컴포넌트를 배치하고 와이어를 연결하여 캔버스에서 작업을 시작할 수 있습니다.
 
-![IMAGE](../../.gitbook/assets/1-1-2_006-grouping1.png)
+#### 1.1.2.6. 그룹화
 
-> 1. A group of components delineated by the Box Outline profile.
+캔버스에서 컴포넌트들을 함께 그룹화(Grouping)하는 것은 가독성과 이해도를 높이는 데 특히 유용합니다. 그룹화를 하면 캔버스에서 여러 컴포넌트를 빠르게 선택하고 이동할 수 있는 능력이 생깁니다. 원하는 컴포넌트를 선택한 상태에서 Ctrl+G를 입력하여 그룹을 생성할 수 있습니다. 다른 방법으로는 메인 메뉴 바의 Edit 메뉴 아래에 있는 "Group Selection" 버튼을 사용할 수도 있습니다. 그룹 객체를 마우스 오른쪽 버튼으로 클릭하면 그룹 색상, 투명도, 이름, 윤곽선 유형에 대한 사용자 지정 매개변수를 정의할 수 있습니다.
 
-2. Right-click anywhere on the group to edit the name and appearance of the group.
+![](../../.gitbook/assets/1-1-2_006-grouping1.png)
 
-![IMAGE](../../.gitbook/assets/1-1-2_007-grouping2.png)
+> 1. 박스 윤곽선(Box Outline) 프로필로 구획화된 컴포넌트 그룹
+> 2. 그룹의 이름과 모양을 편집하려면 그룹의 아무 곳이나 마우스 오른쪽 버튼으로 클릭하세요.
 
-> You can also define a group using a meta-ball algorithm by using the Blob Outline profile.
+![](../../.gitbook/assets/1-1-2_007-grouping2.png)
 
-![IMAGE](../../.gitbook/assets/1-1-2_008-grouping3.png)
+> 블롭 윤곽선(Blob Outline) 프로필을 사용하면 메타볼(meta-ball) 알고리즘 형태의 그룹을 정의할 수도 있습니다.
 
-> Two groups are nested inside one another. The color (light blue) has been changed on the outer group to help visually identify one group from the other. Groups are drawn “behind” the components within them and, in cases such as this, there is a depth order to the two groups. To change this, go to Edit > Arrange in the main menu bar.
+![](../../.gitbook/assets/1-1-2_008-grouping3.png)
 
-\####1.1.1.7. WIDGETS There are a few widgets that are available in Grasshopper that can help you perform useful actions. You can toggle any of these widgets on/off under the Display menu of the Main Menu bar. Below we’ll look at a few of the most frequently used widgets.
+> 두 개의 그룹이 서로 중첩되어 있습니다. 외부 그룹의 색상(연한 파란색)을 변경하여 두 그룹을 시각적으로 구별하기 쉽게 했습니다. 그룹은 그 안에 포함된 컴포넌트들보다 "뒤에" 그려지며, 이와 같은 경우 두 그룹 사이에도 깊이 순서(depth order)가 존재합니다. 이 순서를 변경하려면 메인 메뉴 바에서 Edit > Arrange로 이동하세요.
 
-**The Align Widget** One useful UI widget which can help you keep your canvas clean is the Align widget. You can access the Align widget by selecting multiple components at the same time and clicking on one of the options found in the dashed outline that surrounds your selected components. You can align left, vertical center, right, or top, horizontal center, bottom, or distribute components equally through this interface. When first starting out, you may find that these tools sometimes get in the way (it is possible to make the mistake of collapsing several components on top of each other). However, with a little practice these tools can be invaluable as you begin to structure graphs which are readable and comprehensible.
+#### 1.1.2.7. 위젯
 
-![IMAGE](../../.gitbook/assets/1-1-2_009-align-widget.png)
+그래스호퍼에는 유용한 작업을 수행하는 데 도움을 주는 몇 가지 위젯이 있습니다. 메인 메뉴 바의 **Display** 메뉴에서 이러한 위젯들을 켜거나 끌 수(on/off) 있습니다. 아래에서 가장 자주 사용되는 몇 가지 위젯을 살펴보겠습니다.
 
-> 1. Align right.
+**정렬 위젯 Align Widget:** 캔버스를 깔끔하게 유지하는 데 도움이 되는 유용한 UI 위젯 중 하나는 **정렬 위젯(Align Widget)**&#xC785;니다. 여러 컴포넌트를 동시에 선택하면 선택된 컴포넌트들을 둘러싼 점선 윤곽선이 나타나는데, 그 위에 있는 옵션 중 하나를 클릭하여 정렬 위젯을 사용할 수 있습니다. 이 인터페이스를 통해 왼쪽, 수직 중앙, 오른쪽, 위쪽, 수평 중앙, 아래쪽으로 정렬하거나 컴포넌트들을 균등하게 분배할 수 있습니다. 처음 시작할 때는 이 도구가 때때로 방해가 된다고 느낄 수도 있습니다(실수로 여러 컴포넌트를 한곳에 겹쳐버리는 실수를 하기 쉽습니다). 하지만 조금만 연습하면 가독성 높고 이해하기 쉬운 그래프를 구조화할 때 매우 귀중한 도구가 될 것입니다.
 
-2. Distribute vertically.
+![](../../.gitbook/assets/1-1-2_009-align-widget.png)
 
-**The Profiler Widget** The profiler lists worst-case runtimes for parameters and components, allowing you to track down bottlenecks in networks and to compare different components in terms of performance. Note that this widget is turned off by default.
+> 1. 우측 정렬
+> 2. 중앙 정렬
 
-![IMAGE](../../.gitbook/assets/1-1-2_010-profiler.png)
+**프로파일러 위젯 Profiler Widget:** 프로파일러(Profiler)는 매개변수와 컴포넌트의 최악의 경우 실행 시간(worst-case runtimes)을 나열하여, 네트워크의 병목 현상을 추적하고 성능 측면에서 서로 다른 컴포넌트들을 비교할 수 있게 해줍니다. 이 위젯은 기본적으로 꺼져 있다는 점을 참고하세요.
 
-> The Profiler widget gives you visual feedback as to which components in your definition could be causing longer computational times.
+![](../../.gitbook/assets/1-1-2_010-profiler.png)
 
-**The Markov Widget** This widget uses Markov chains to ‘predict’ which component you may want to use next based on your behavior in the past. A Markov chain is a process that consists of a finite number of states (or levels) and some known probabilities. It can take some time for this widget to become accustomed to a particular user, but over time you should begin to notice that this widget will begin to suggest components that you may want to use next. The Markov Widget can suggest up to five possible components depending on your recent activity. You can right-click on the Markov widget (the default location is the bottom left-hand corner of the canvas) to dock it into one of the other corners of the canvas or to hide it completely.
+> 프로파일러 위젯은 데피니션 내의 어떤 컴포넌트가 연산 시간을 길게 만들고 있는지에 대한 시각적 피드백을 제공합니다.
 
-\####1.1.2.8. USING THE SEARCH FEATURE Although a lot of thought has gone into the placement of each component on the component panel to make it intuitive for new users, people sometimes find it difficult to locate a specific component that might be buried deep inside one of the category panels. Fortunately, you can also find components by name, by double-clicking on any empty space on the canvas. This will invoke a pop-up search box. Simply type in the name of the component you are looking for and you will see a list of parameters or components that match your request.
+**마르코프 위젯 Markov Widget:** 이 위젯은 과거의 사용 패턴을 기반으로 여러분이 다음에 사용하고 싶어 할 만한 컴포넌트를 '예측'하기 위해 마르코프 체인(Markov chains)을 사용합니다. 마르코프 체인은 유한한 수의 상태(또는 레벨)와 알려진 확률들로 구성된 프로세스입니다. 이 위젯이 특정 사용자에게 익숙해지는 데는 시간이 좀 걸릴 수 있지만, 시간이 지남에 따라 여러분이 다음에 사용할 만한 컴포넌트들을 제안하기 시작하는 것을 알아차리게 될 것입니다. 마르코프 위젯은 최근 활동에 따라 최대 5개의 가능한 컴포넌트를 제안할 수 있습니다. 마르코프 위젯(기본 위치는 캔버스 왼쪽 하단 모서리)을 마우스 오른쪽 버튼으로 클릭하여 캔버스의 다른 모서리에 도킹하거나 완전히 숨길 수 있습니다.
 
-![IMAGE](../../.gitbook/assets/1-1-2_011-search.png)
+#### 1.1.2.8. 검색기능사용하기
 
-> Double-click anywhere on the canvas to invoke a key word search for a particular component found in the Component Panels.
+새로운 사용자가 직관적으로 사용할 수 있도록 컴포넌트 패널의 각 컴포넌트 배치에 많은 공을 들였지만, 카테고리 패널 깊숙이 묻혀 있는 특정 컴포넌트를 찾는 것이 때로는 어려울 수 있습니다. 다행히도, 캔버스의 빈 공간 아무 곳이나 더블 클릭하여 이름으로 컴포넌트를 찾을 수도 있습니다. 이렇게 하면 팝업 검색창이 나타납니다. 찾으려는 컴포넌트의 이름을 입력하기만 하면 요청과 일치하는 매개변수나 컴포넌트의 목록을 볼 수 있습니다.
+
+![](../../.gitbook/assets/1-1-2_011-search.png)
+
+> 캔버스 어디든 더블 클릭하면 컴포넌트 패널에서 특정 컴포넌트에 대한 키워드 검색을 실행할 수 있습니다.
 
 ![IMAGE](../../.gitbook/assets/1-1-2_012-search2.png)
 
-> A search for “divide” lists a variety of components.
+> "divide"로 검색하면 다양한 컴포넌트가 나옵니다.
+>
+> 1. Division operator 컴포넌트
+> 2. Divide Surface 컴포넌트
+> 3. Divide Domain2 컴포넌트
 
-1. Division operator component.
-2. Divide Surface component.
-3. Divide Domain2 component.
+#### 1.1.2.9. 찾기(FIND) 기능
 
-\####1.1.2.9. THE FIND FEATURE There are literally hundreds (if not thousands) of Grasshopper components which are available to you and it can be daunting as a beginner to know where to look to find a specific component within the Component Palettes. The quick solution is to double-click anywhere on the canvas to launch a search query for the component you are looking for. However, what if we need to find a particular component already placed on our canvas? No need to worry. By right-clicking anywhere on the canvas or pressing the F3 key, you can invoke the Find feature. Start by typing in the name of the component that you are looking for.
+그래스호퍼에는 말 그대로 수백 개(어쩌면 수천 개)의 컴포넌트가 존재하기 때문에, 초보자가 컴포넌트 팔레트 내에서 특정 컴포넌트의 위치를 아는 것은 벅찬 일일 수 있습니다. 이에 대한 빠른 해결책은 캔버스의 빈 공간을 더블 클릭하여 원하는 컴포넌트에 대한 검색 쿼리를 실행하는 것입니다(앞서 설명한 Search 기능). 하지만, 만약 이미 캔버스에 배치해 둔 특정 컴포넌트를 찾아야 한다면 어떻게 해야 할까요? 걱정할 필요 없습니다. 캔버스 아무 곳이나 마우스 오른쪽 버튼으로 클릭하거나 **F3** 키를 눌러 **'찾기(Find)'** 기능을 불러낼 수 있습니다. 찾으려는 컴포넌트의 이름을 입력하는 것으로 시작해 보세요.
 
-The Find feature employs the use of some very sophisticated algorithms which search not only for any instances of a component’s name within a definition (a component’s name is the title of the component found under the Component Panel which we as users cannot change), but also any unique signatures which we may have designated for a particular component (known as nicknames). The Find feature can also search for any component type on the canvas or search through text panel, scribble, and group content. Once the Find feature has found a match, it will automatically grey out the rest of the definition and draw a dashed line around the highlighted component. If multiple matches are found, a list of components matching your search query will be displayed in the Find dialog box and hovering over an item in the list will turn that particular component on the canvas green.
+찾기(Find) 기능은 매우 정교한 알고리즘을 사용합니다. 이 알고리즘은 데피니션 내의 컴포넌트 이름(컴포넌트 패널에 있는 제목으로, 사용자가 변경할 수 없음)뿐만 아니라, 우리가 특정 컴포넌트에 지정했을 수 있는 고유한 서명(일명 '닉네임')도 검색합니다. 또한 찾기 기능은 캔버스에 있는 모든 유형의 컴포넌트를 검색하거나 텍스트 패널(Text panel), 스크리블(Scribble), 그룹(Group)의 내용까지도 검색할 수 있습니다. 찾기 기능이 일치하는 항목을 발견하면, 자동으로 데피니션의 나머지 부분은 회색으로 흐리게 처리하고 강조된 컴포넌트 주위에 점선을 그립니다. 만약 여러 개의 일치 항목이 발견되면, 검색어와 일치하는 컴포넌트 목록이 대화 상자에 표시되며, 목록의 항목 위에 마우스를 올리면 캔버스상의 해당 컴포넌트가 초록색으로 변합니다.
 
-![IMAGE](../../.gitbook/assets/1-1-2_013-find.png)
+![](../../.gitbook/assets/1-1-2_013-find.png)
 
-> By right-clicking anywhere on the canvas or pressing the F3 key, you can invoke the Find feature. Start by typing in the name of the component that you are looking for.
+> 캔버스 어디든 우클릭하거나 F3 키를 누르면 찾기(Find) 기능을 실행할 수 있습니다. 찾고 있는 컴포넌트 이름을 입력하세요.
 
-![IMAGE](../../.gitbook/assets/1-1-2_014-find2.png)
+![](../../.gitbook/assets/1-1-2_014-find2.png)
 
-> The Find feature can be quite helpful to locate a particular component on the canvas. Right-click anywhere on the canvas to launch the Find dialog box.
+> 찾기(Find) 기능은 캔버스에서 특정 요소를 찾는 데 꽤 도움이 될 수 있습니다. 캔버스 어디든 우클릭하여 찾기(Find) 대화상자를 실행하세요.
 
-![IMAGE](../../.gitbook/assets/1-1-2_015-find3.png)
+![](../../.gitbook/assets/1-1-2_015-find3.png)
 
-> A small arrow will also be displayed next to each item in the list which points to its corresponding component on the canvas. Try moving the Find dialog box around on the canvas and watch the arrows rotate in to keep track of their components. Clicking on the Find result will try to place the component (on the canvas) next to the Find dialog box.
+> 목록의 각 항목 옆에는 작은 화살표가 표시되는데, 이는 캔버스 상에 있는 해당 컴포넌트의 위치를 가리킵니다. 찾기 대화 상자를 캔버스 위에서 이리저리 움직여 보면서, 화살표가 컴포넌트 위치를 추적하며 회전하는 모습을 확인해 보세요. 찾기 결과(목록의 항목)를 클릭하면, (캔버스 상의) 해당 컴포넌트를 찾기 대화 상자 바로 옆으로 이동시켜 보여줍니다.
 
-\####1.1.2.10. USING THE RADIAL MENU As you become more proficient in using the Grasshopper interface, you’ll begin to find ways to expedite your workflow. Using shortcuts is one way to do this, however there is another feature which can allow you to quickly access a number of useful tools – the radial UI menu. You can invoke the radial menu by hitting the space bar (while your mouse is over the canvas or a component) or by clicking your middle mouse button. The radial menu will enable different tools depending on whether you invoke the menu by clicking directly on top of a component, or just anywhere on the canvas. In the image below, you see the radial menu has more features available when clicking on top of a selected component versus just clicking anywhere else on the canvas. This menu can dramatically increase the speed at which you create Grasshopper documents.
+#### 1.1.2.10. 방사형메뉴(RADIAL MENU) 사용하기
 
-![IMAGE](../../.gitbook/assets/1-1-2_016-radial-menu.png)
+그래스호퍼 인터페이스 사용에 더 능숙해지면, 워크플로를 가속화 할 방법을 찾기 시작할 것입니다. 단축키를 사용하는 것도 한 가지 방법이지만, 수많은 유용한 도구들에 빠르게 접근할 수 있게 해주는 또 다른 기능인 **'방사형 UI 메뉴(radial UI menu)'**&#xAC00; 있습니다. 마우스가 캔버스나 컴포넌트 위에 있을 때 **컨트롤+스페이스바**를 누르거나, **마우스 가운데 버튼(휠 버튼)**&#xC744; 클릭하여 방사형 메뉴를 호출할 수 있습니다. 방사형 메뉴는 컴포넌트 바로 위에서 호출했는지, 아니면 단순히 캔버스의 빈 공간에서 호출했는지에 따라 서로 다른 도구를 활성화합니다. 아래 이미지에서 볼 수 있듯이, 캔버스의 빈 곳을 클릭했을 때보다 선택된 컴포넌트 위에서 클릭했을 때 방사형 메뉴에 더 많은 기능이 표시됩니다. 이 메뉴를 잘 활용하면 그래스호퍼 문서를 작성하는 속도를 비약적으로 높일 수 있습니다.
 
-> The Radial UI menu allows you to quickly access frequently used menu items.
+![](../../.gitbook/assets/1-1-2_016-radial-menu.png)
 
-\####1.1.2.11. THE CANVAS TOOLBAR The canvas toolbar provides quick access to a number of frequently used Grasshopper features. All of the tools are available through the menu as well, and you can hide the toolbar if you like. The toolbar can be re-enabled from the View tab on the Main Menu Bar.
+> 방사형 UI (Radial UI) 메뉴는 자주 사용하는 메뉴 항목에 빠르게 접근할 수 있게 해줍니다.
 
-![IMAGE](../../.gitbook/assets/1-1-2_017-toolbar1.png)
+#### 1.1.2.11. 캔버스  툴바 (CANVAS TOOLBAR)
 
-> 1. **Open File:** A shortcut to open a Grasshopper File.
+캔버스 툴바는 자주 사용되는 그래스호퍼 기능들에 빠르게 접근할 수 있도록 해줍니다. 모든 도구는 메뉴를 통해서도 사용할 수 있으며, 원한다면 툴바를 숨길 수도 있습니다. 툴바는 메인 메뉴 바의 View 탭에서 다시 활성화할 수 있습니다.
 
-2. **Save File:** A shortcut to save the currentGrasshopper File.
-3. **Zoom Defaults**: Default zoom settings that allow you to zoom in or out of your canvas at predefined intervals.
-4. **Zoom Extents:** Zoom to the extents of your definition. Click on the arrow next to the Zoom Extents icon to select one of the sub-menu items to zoom to a particular region within your definition.
-5. \*\*Named Views: \*\*This feature exposes a menu allowing you to store or recall any view area in your definition.
-6. **The Sketch Tool:** The sketch tool works similarly to the pencil tool set found in Adobe Photoshop with a few added features.
+![](../../.gitbook/assets/1-1-2_017-toolbar1.png)
 
-![IMAGE](../../.gitbook/assets/1-1-2_017-toolbar2.png)
+> 1. **Open File (파일 열기):** 그래스호퍼 파일을 여는 단축 아이콘입니다.
+> 2. **Save File (파일 저장):** 현재 그래스호퍼 파일을 저장하는 단축 아이콘입니다.
+> 3. **Zoom Defaults (기본 줌):** 미리 정의된 비율로 캔버스를 확대하거나 축소할 수 있는 기본 줌 설정입니다.
+> 4. **Zoom Extents (전체 줌):** 데피니션의 전체 범위가 보이도록 화면을 조정합니다. Zoom Extents 아이콘 옆의 화살표를 클릭하면 하위 메뉴를 선택하여 데피니션 내의 특정 영역으로 줌(확대/축소)할 수 있습니다.
+> 5. **Named Views (명명된 뷰):** 이 기능을 사용하면 데피니션 내의 특정 화면 영역(뷰)을 저장해 두거나 저장된 뷰를 다시 불러올 수 있는 메뉴가 나타납니다.
+> 6. **The Sketch Tool (스케치 도구):** 스케치 도구는 Adobe Photoshop의 연필 도구와 유사하게 작동하며, 몇 가지 추가 기능이 더해져 있습니다.
 
-> 1. **Preview Settings:** If a Grasshopper component generates some form of geometry, then a preview of this geometry will be visible in the viewport by default. You can disable the preview on a perobject basis by right-clicking each component and de-activating the preview feature, or globally change the preview state by using one of these three buttons.
+![](../../.gitbook/assets/1-1-2_017-toolbar2.png)
 
-2. Wire-frame preview.
-3. Turn off preview.
-4. Shaded preview (default).
-5. **Preview Selected Objects:** With this button toggled, Grasshopper will only display geometry that is part of selected components, even if those components have a preview=off state.
-6. **Document Preview Settings:** Grasshopper has a default color scheme for selected (semi-transparent green) and unselected (semi-transparent red) geometry. It is possible to override this color scheme with the Document Preview Settings dialog.
-7. **Preview Mesh Quality:** For optimization purposes, these settings allow you to control the quality of the mesh/surface display of the geometry rendered in Rhino. Higher quality settings will cause longer calculation times, whereas lower settings will display less accurate preview geometry. It should be noted that the geometry still maintains a high-degree of resolution when baked into the Rhino document – these settings merely effect the display performance and quality.
+> 1. **Preview Settings (미리보기 설정):** 만약 그래스호퍼 컴포넌트가 어떤 형태의 지오메트리를 생성한다면, 이 지오메트리의 미리보기(preview)는 뷰포트에서 기본적으로 보이게 됩니다. 각 컴포넌트를 마우스 오른쪽 버튼으로 클릭하여 미리보기 기능을 비활성화(de-activating)함으로써 객체별(per-object)로 미리보기를 끌 수 있으며, 또는 다음 세 가지 버튼 중 하나를 사용하여 전역적으로(globally) 미리보기 상태를 변경할 수도 있습니다.
+> 2. **Wire-frame preview (와이어프레임 미리보기):** 지오메트리를 선 형태로만 표시합니다.
+> 3. **Turn off preview (미리보기 끄기):** 모든 미리보기를 끕니다.
+> 4. **Shaded preview (음영 미리보기 - 기본설정):** 지오메트리를 음영 상태로 표시합니다.
+> 5. **Preview Selected Objects (선택한 객체 미리보기):** 이 버튼이 켜져 있으면, 그래스호퍼는 선택된 컴포넌트의 지오메트리만 표시합니다. 해당 컴포넌트의 자체 미리보기 상태가 꺼져(preview=off) 있어도 표시됩니다.
+> 6. **Document Preview Settings (문서 미리보기 설정):** 그래스호퍼는 선택된 지오메트리(반투명 초록색)와 선택되지 않은 지오메트리(반투명 빨간색)에 대한 기본 색상 구성(color scheme)을 가지고 있습니다. 문서 미리보기 설정 대화 상자를 통해 이 색상 구성을 재정의(override)할 수 있습니다.
+> 7. **Preview Mesh Quality (미리보기 메쉬 품질):** 최적화를 위해, 이 설정을 통해 라이노에서 렌더링되는 지오메트리의 메쉬/서피스 표시 품질을 제어할 수 있습니다. 품질 설정을 높이면 계산 시간이 길어지고, 낮추면 미리보기 지오메트리가 덜 정확하게 표시됩니다. 유의할 점은, 라이노 문서로 '구워질(baked)' 때 지오메트리는 여전히 높은 해상도를 유지한다는 것입니다. 이 설정은 단지 화면 표시 성능과 품질에만 영향을 줍니다.
 
 ![IMAGE](../../.gitbook/assets/1-1-2_018-sketch.png)
 
