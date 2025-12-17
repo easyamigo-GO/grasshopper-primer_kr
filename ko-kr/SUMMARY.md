@@ -7,7 +7,7 @@
   * [1.1. 안녕 그래스호퍼!](1-foundations/1-1/0_hello-grasshopper.md)
     * [1.1.1. 그래스호퍼 설치 및 실행](1-foundations/1-1/1_installing-and-launching-grasshopper.md)
     * [1.1.2. 그래스호퍼 UI](1-foundations/1-1/2_the-grasshopper-ui.md)
-    * [Talking to Rhino](1-foundations/1-1/3_talking-to-rhino.md)
+    * [1.1.3. 라이노와 대화하기](1-foundations/1-1/3_talking-to-rhino.md)
   * [Anatomy of a Grasshopper Definition](1-foundations/1-2/0_anatomy-of-a-grasshopper-definition.md)
     * [Grasshopper Object Types](1-foundations/1-2/1_grasshopper-object-types.md)
     * [Grasshopper Component Parts](1-foundations/1-2/2_grasshopper-component-parts.md)

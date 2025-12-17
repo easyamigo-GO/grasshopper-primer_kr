@@ -1,8 +1,25 @@
-# Talking to Rhino
+---
+layout:
+  width: default
+  title:
+    visible: false
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: false
+---
 
-\###1.1.3. TALKING TO RHINO
+# 1.1.3. 라이노와 대화하기
 
-\#####Unlike a Rhino document, a Grasshopper definition does not contain any actual objectsor geometry. Instead, a Grasshopper definition represents a set of rules & instructions for how Rhino can automate tasks.
+## <mark style="color:$primary;">1.1.3. 라이노와 대화하기</mark>
+
+Unlike a Rhino document, a Grasshopper definition does not contain any actual objectsor geometry. Instead, a Grasshopper definition represents a set of rules & instructions for how Rhino can automate tasks.
 
 ![IMAGE](../../.gitbook/assets/1-1-3_001-talking-to-rhino.png)
 

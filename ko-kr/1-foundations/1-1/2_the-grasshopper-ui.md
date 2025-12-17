@@ -193,7 +193,7 @@ File 메뉴 아래에 있는 Preferences(환경설정) 대화 상자를 통해 �
 > 5. **Named Views (명명된 뷰):** 이 기능을 사용하면 데피니션 내의 특정 화면 영역(뷰)을 저장해 두거나 저장된 뷰를 다시 불러올 수 있는 메뉴가 나타납니다.
 > 6. **The Sketch Tool (스케치 도구):** 스케치 도구는 Adobe Photoshop의 연필 도구와 유사하게 작동하며, 몇 가지 추가 기능이 더해져 있습니다.
 
-![](../../.gitbook/assets/1-1-2_017-toolbar2.png)
+<figure><img src="../../.gitbook/assets/grasshopper preview.png" alt=""><figcaption></figcaption></figure>
 
 > 1. **Preview Settings (미리보기 설정):** 만약 그래스호퍼 컴포넌트가 어떤 형태의 지오메트리를 생성한다면, 이 지오메트리의 미리보기(preview)는 뷰포트에서 기본적으로 보이게 됩니다. 각 컴포넌트를 마우스 오른쪽 버튼으로 클릭하여 미리보기 기능을 비활성화(de-activating)함으로써 객체별(per-object)로 미리보기를 끌 수 있으며, 또는 다음 세 가지 버튼 중 하나를 사용하여 전역적으로(globally) 미리보기 상태를 변경할 수도 있습니다.
 > 2. **Wire-frame preview (와이어프레임 미리보기):** 지오메트리를 선 형태로만 표시합니다.
@@ -203,12 +203,12 @@ File 메뉴 아래에 있는 Preferences(환경설정) 대화 상자를 통해 �
 > 6. **Document Preview Settings (문서 미리보기 설정):** 그래스호퍼는 선택된 지오메트리(반투명 초록색)와 선택되지 않은 지오메트리(반투명 빨간색)에 대한 기본 색상 구성(color scheme)을 가지고 있습니다. 문서 미리보기 설정 대화 상자를 통해 이 색상 구성을 재정의(override)할 수 있습니다.
 > 7. **Preview Mesh Quality (미리보기 메쉬 품질):** 최적화를 위해, 이 설정을 통해 라이노에서 렌더링되는 지오메트리의 메쉬/서피스 표시 품질을 제어할 수 있습니다. 품질 설정을 높이면 계산 시간이 길어지고, 낮추면 미리보기 지오메트리가 덜 정확하게 표시됩니다. 유의할 점은, 라이노 문서로 '구워질(baked)' 때 지오메트리는 여전히 높은 해상도를 유지한다는 것입니다. 이 설정은 단지 화면 표시 성능과 품질에만 영향을 줍니다.
 
-![IMAGE](../../.gitbook/assets/1-1-2_018-sketch.png)
+![](../../.gitbook/assets/1-1-2_018-sketch.png)
 
-> The sketch tool allows changes to the line weight, line type, and color. By right-clicking on the selected sketch object you can choose to simplify your line to create a smoother effect. Right-click on your sketch object and select “Load from Rhino”. When prompted, select any 2D shape in your Rhino scene. Once you have selected your referenced shape, hit Enter, and your previous sketch line will be reconfigured to your Rhino reference shape.
+> 스케치 도구를 사용하면 선 굵기, 선 종류, 색상을 변경할 수 있습니다. 선택한 스케치 객체를 마우스 오른쪽 버튼으로 클릭하면 선을 단순화(simplify)하여 더 부드러운 효과를 낼 수 있습니다. 스케치 객체를 우클릭하고 "Load from Rhino(라이노에서 불러오기)"를 선택해 보세요. 프롬프트가 뜨면 라이노 장면(scene)에 있는 아무 2D 형태나 선택하고 Enter를 누르세요. 그러면 이전에 그린 스케치 선이 선택한 라이노의 참조 형태로 재구성됩니다.
 
-> Note: Your sketch object may have moved from its original location once you have loaded a shape from Rhino. Grasshopper places your sketch object relative to the origin of the canvas (upper left hand corner) and the world xy plane origin in Rhino.
+> 주의: 라이노에서 형태를 불러오면 스케치 객체가 원래 위치에서 이동했을 수 있습니다. 그래스호퍼는 캔버스의 원점(왼쪽 상단 모서리)과 라이노의 월드 XY 평면 원점을 기준으로 스케치 객체를 배치하기 때문입니다.
 
-![IMAGE](../../.gitbook/assets/1-1-2_019-preview.png)
+![](../../.gitbook/assets/1-1-2_019-preview.png)
 
-> Grasshopper has a default color scheme for selected (semi-transparent green) and unselected (semi-transparent red) geometry. It is possible to override this color scheme with the Document Preview Settings dialog.
+> 그래스호퍼는 선택된 지오메트리(반투명 초록색)와 선택되지 않은 지오메트리(반투명 빨간색)에 대해 기본 색상 구성을 가지고 있습니다. 문서 미리보기 설정 대화 상자에서 이 색상 구성을 변경할 수 있습니다.
