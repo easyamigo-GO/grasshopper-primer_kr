@@ -19,42 +19,38 @@ layout:
 
 ### <mark style="color:$primary;">1.2.1. 그래스호퍼 오브젝트 유형</mark>
 
-Grasshopper consists of two primary types of user objects: parameters andcomponents. Parameters store data, whereas components perform actions that resultin data. The most basic way to understand Grasshopper is to remember that we willuse data to define the inputs of actions (which will result in new data that we cancontinue to use).
+그래스호퍼는 **매개변수(parameters)**&#xC640; **컴포넌트(components)**&#xB77C;는 두 가지 주요 사용자 객체 유형으로 구성됩니다. 매개변수는 데이터를 저장하는 반면, 컴포넌트는 데이터를 결과로 만들어내는 동작(actions)을 수행합니다. 그래스호퍼를 이해하는 가장 기본적인 방법은, 우리가 동작의 입력(inputs)을 정의하기 위해 데이터를 사용하고, 그 동작이 다시 우리가 계속 사용할 수 있는 새로운 데이터를 결과로 내놓는다는 것을 기억하는 것입니다.
 
-#### 1.2.1.1. PARAMETERS
+#### 1.2.1.1. 매개변수 (PARAMETERS)
 
-Parameters store the data - numbers, colors, geometry, and more - that we send through the graph in our definition. Parameters are container objects which are usually shown as small rectangular boxes with a single input and single output. We also know that these are parameters because of the shape of their icon. All parameter objects have a hexagonal border around their icon.
+매개변수는 숫자, 색상, 지오메트리 등 우리가 데피니션의 그래프를 통해 전송하는 데이터를 저장합니다. 매개변수는 보통 하나의 입력과 하나의 출력을 가진 작은 직사각형 상자로 표시되는 컨테이너 객체입니다. 또한 아이콘의 모양을 보고 이것이 매개변수라는 것을 알 수 있습니다. 모든 매개변수 객체는 아이콘 주위에 육각형 테두리를 가지고 있습니다.
 
-Geometry parameters can reference geometry from Rhino, or inherit geometry from other components. The point and curve objects are both geometry parameters.
+지오메트리 매개변수는 라이노에서 지오메트리를 참조(reference)해 오거나, 다른 컴포넌트로부터 지오메트리를 상속(inherit)받을 수 있습니다. 점(Point)과 커브(Curve) 객체는 모두 지오메트리 매개변수입니다.
 
 ![](../../.gitbook/assets/1-2-1_001-geometry-parameters.png)
 
-Input parameters are dynamic interface objects that allow you to interact with your definition. The number slider and the graph mapper are both input parameters.
+입력 매개변수(Input parameters)는 여러분이 데피니션과 상호작용할 수 있게 해주는 동적인 인터페이스 객체입니다. 넘버 슬라이더(Number Slider)와 그래프 매퍼(Graph Mapper)는 둘 다 입력 매개변수입니다.
 
 ![](../../.gitbook/assets/1-2-1_002-input-parameters.png)
 
-1.2.1.2. COMPONENTS
+#### 1.2.1.2. 컴포넌트 (COMPONENTS)
 
-Components perform actions based on the inputs they receive. There are manytypes of components for different tasks.
+컴포넌트는 입력받은 값을 바탕으로 동작(action)을 수행합니다. 다양한 작업을 위한 여러 유형의 컴포넌트가 존재합니다.
 
 ![](../../.gitbook/assets/1-2-1_003-components.png)
 
-> 1. The multiplication component is an operator that calculates the product of twonumbers.
-> 2. The Divide component operates on geometry, dividing a curve into equal segments.
-> 3. The Circle CNR component constructs a circle geometry from input data; a center point, normal vector, and radius.
-> 4. The Loft component constructs a surface by lofting curves.
+> 1. 곱셈(Multiplication) 컴포넌트는 두 숫자의 곱을 계산하는 연산자입니다.
+> 2. 분할(Divide) 컴포넌트는 지오메트리에 작용하며, 커브를 동일한 구간으로 나눕니다.
+> 3. 원(Circle CNR) 컴포넌트는 입력 데이터(중심점, 법선 벡터, 반지름)를 사용하여 원 지오메트리를 생성(construct)합니다.
+> 4. 로프트(Loft) 컴포넌트는 커브들을 로프트(lofting)하여 서피스를 생성합니다.
 
-2. The Divide component operates on geometry, dividing a curve into equal segments.
-3. The Circle CNR component constructs a circle geometry from input data; a center point, normal vector, and radius.
-4. The Loft component constructs a surface by lofting curves.
+#### 1.2.1.3. 객체 색상
 
-1.2.1.3. OBJECT COLORS
+객체의 색상을 통해 각 객체의 상태에 대한 정보를 파악할 수 있습니다. 그래스호퍼의 기본 색상 코드 시스템을 살펴보겠습니다.
 
-We can glean some information about the state of each object based on their color. Let’s take a look at Grasshopper’s default color coding system.
+경고(warnings)나 오류(errors)가 없는 매개변수는 **밝은 회색**으로 표시됩니다. 이 색상은 해당 매개변수가 문제없이 정상적으로 작동하고 있음을 나타냅니다.
 
-A parameter which contains neither warnings nor errors is shown in light gray. This color object indicates that everything is working properly with this parameter.
-
-A parameter which contains warnings is displayed as an orange box. Any object which fails to collect data is considered suspect in a Grasshopper definition since it is not contributing to the solution.. Therefore, all parameters (when freshly added) are orange, to indicate they do not contain any data and have thus no functional effect on the outcome of the solution. By default, parameters and components that are orange also have a small balloon at the upper right hand corner of the object. If you hover your mouse over this balloon, it will reveal information about why the component is giving you a warning. Once a parameter inherits or defines data, it will become grey and the baloon will disappear.
+경고가 있는 매개변수는 **주황색 상자**로 표시됩니다. 데이터를 수집하지 못한 객체는 솔루션 도출에 기여하지 못하므로, 그래스호퍼 데피니션에서 '의심스러운' 상태로 간주됩니다. 따라서 모든 매개변수는  (처음 캔버스에 추가되었을 때) 아직 데이터가 없으며 결과적으로 솔루션의 결과에 아무런 기능적 영향을 미치지 않음을 나타내기 위해 주황색을 띱니다. 기본적으로 주황색인 매개변수와 컴포넌트는 객체의 오른쪽 상단 모서리에 작은 말풍선이 달려 있습니다. 이 말풍선 위에 마우스를 올리면 컴포넌트가 경고를 보내는 이유에 대한 정보를 볼 수 있습니다. 매개변수가 데이터를 상속받거나 정의하게 되면, 색상은 회색으로 변하고 말풍선은 사라집니다.
 
 ![](../../.gitbook/assets/1-2-1_004-parameter-warning.png)
 
