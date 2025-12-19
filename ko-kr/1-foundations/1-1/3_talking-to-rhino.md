@@ -19,79 +19,91 @@ layout:
 
 ## <mark style="color:$primary;">1.1.3. 라이노와 대화하기</mark>
 
-Unlike a Rhino document, a Grasshopper definition does not contain any actual objectsor geometry. Instead, a Grasshopper definition represents a set of rules & instructions for how Rhino can automate tasks.
+**라이노 문서와 달리, 그래스호퍼 데피니션(definition)은 실제 객체나 지오메트리를 포함하지 않습니다. 대신, 그래스호퍼 데피니션은 라이노가 작업을 자동화하는 방법에 대한 일련의 규칙과 지침을 나타냅니다.**
 
-![IMAGE](../../.gitbook/assets/1-1-3_001-talking-to-rhino.png)
+![](../../.gitbook/assets/1-1-3_001-talking-to-rhino.png)
 
-> 1. Grasshopper preview geometry.
+> 1. 그래스호퍼 미리보기 지오메트리.
+> 2. 라이노 뷰포트.
+> 3. 그래스호퍼 애플리케이션 창.
 
-2. Rhino viewports.
-3. Grasshopper Application window.
+#### 1.1.3.1. 뷰포트 피드백
 
-\####1.1.3.1. VIEWPORT FEEDBACK All geometry that is generated using the various Grasshopper components will show up (by default) in the Rhino viewport. This preview is just an Open GL approximation of the actual geometry, and as such you will not be able to select the geometry in the Rhino viewport (you must first bake it into the scene). You can turn the geometry preview on/off by right-clicking on a component and selecting the Preview toggle. The geometry in the viewport is color coded to provide visual feedback. The image below outlines the default color scheme.
+다양한 그래스호퍼 컴포넌트를 사용하여 생성된 모든 지오메트리는 (기본적으로) 라이노 뷰포트에 나타납니다. 이 미리보기는 실제 지오메트리에 대한 **OpenGL 근사치(approximation)**&#xC77C; 뿐이므로, 라이노 뷰포트에서 해당 지오메트리를 직접 선택할 수는 없습니다. 선택하려면 먼저 씬으로 **'베이크(bake, 굽기)'** 해야 합니다. 컴포넌트를 마우스 오른쪽 버튼으로 클릭하고 Preview(미리보기) 토글을 선택하여 지오메트리 미리보기를 켜거나 끌 수 있습니다. 뷰포트의 지오메트리는 시각적 피드백을 제공하기 위해 색상으로 구분(color coded)되어 표시됩니다. 아래 이미지는 기본 색상 구성(color scheme)을 보여줍니다.
 
-> Note: This is the default color scheme, which can be modified using the Document Preview Settings tool on the canvas toolbar.
+> 참고: 이는 기본 색상 구성이며, 캔버스 툴바에 있는 '문서 미리보기 설정(Document Preview Settings)' 도구를 사용하여 수정할 수 있습니다.
 
-![IMAGE](../../.gitbook/assets/1-1-3_002-viewport-feedback.png)
+![](../../.gitbook/assets/1-1-3_002-viewport-feedback.png)
 
-> 1. Green geometry in the viewport belongs to a component which is currently selected.
+> 1. 뷰포트에 있는 초록색 지오메트리는 현재 선택된 컴포넌트에 속한 것입니다.
+> 2. 뷰포트에 있는 빨간색 지오메트리는 현재 선택되지 않은 컴포넌트에 속한 것입니다. (기본 상태)
+> 3. 점(Point) 지오메트리는 다른 라이노 점 객체들과 구별하기 위해, 사각형 점이 아닌 십자(X) 모양으로 그려집니다.
+> 4. 파란색 피드백은 현재 라이노 뷰포트에서 선택 중임을 의미합니다.
 
-2. Red geometry in the viewport belongs to a component which is currently unselected.
-3. Point geometry is drawn as a cross rather than a rectangle to distinguish it from other Rhino point objects.
-4. Blue feedback means you are currently making a selection in the Rhino Viewport.
+#### 1.1.3.2. 실시간  연결 (LIVE WIRES)
 
-\####1.1.3.2. LIVE WIRES Grasshopper is a dynamic environment. Changes that are made are live and their preview display is updated in the Rhino viewport.
+그래스호퍼는 동적인 환경입니다. 작업자가 변경하는 사항들은 **실시간(live)**&#xC73C;로 반영되며, 그 미리보기 화면은 라이노 뷰포트에 즉시 업데이트됩니다.
 
-![IMAGE](../../.gitbook/assets/1-1-3_003-live-wires.png)
+![](../../.gitbook/assets/1-1-3_003-live-wires.png)
 
-\####1.1.3.3. GUMBALL WIDGET When storing geometry as internalized in a Grasshopper parameter, the gumball allows you to interface with that geometry in the Rhino viewport. This update is live and updates will occur as you manipulate the gumball. In contrast, geometry referenced from Rhino directly will continue to exist in the Rhino document and updates from Grasshopper will happen only after any changes occur (as opposed to during).
+#### 1.1.3.3. 검볼위젯G(UMBALL WIDGET)
 
-![IMAGE](../../.gitbook/assets/1-1-3_004-gumball.png)
+지오메트리를 그래스호퍼 매개변수 내에 '내부화(internalized)'하여 저장할 때, 검볼(Gumball)을 사용하면 라이노 뷰포트에서 해당 지오메트리를 직접 조작할 수 있습니다. 이 업데이트는 실시간(live)이며, 검볼을 조작하는 동안 즉시 반영됩니다. 반대로, 라이노에서 직접 참조(referenced)해 온 지오메트리는 라이노 문서에 그대로 존재하며, 그래스호퍼에서의 업데이트는 조작하는 도중이 아니라 변경이 완료된 직후에만 발생합니다.
 
-\####1.1.3.4. BAKING GEOMETRY In order to work with (select, edit, transform, etc.) geometry in Rhino that was created in Grasshopper, you must “bake” it. Baking instantiates new geometry into the Rhino document based on the current state of the Grasshopper graph. It will no longer be responsive to the changes in your definition.
+![](../../.gitbook/assets/1-1-3_004-gumball.png)
 
-![IMAGE](../../.gitbook/assets/1-1-3_005-baking.png)
+#### 1.1.3.4. 지오메트리 베이크( BAKING GEOMETRY)
 
-> 1. Bake by right-clicking a component and selecting Bake.
+그래스호퍼에서 생성된 지오메트리를 라이노에서 작업(선택, 편집, 변형 등)하려면, 반드시 그것을 **"베이크(bake, 굽기)"** 해야 합니다. 베이크는 그래스호퍼 그래프의 현재 상태를 기반으로 라이노 문서에 새로운 지오메트리 실체(instance)를 생성하는 것입니다. 이렇게 베이크된 지오메트리는 더 이상 그래스호퍼 데피니션의 변경 사항에 반응하지 않습니다(연결이 끊어집니다).
 
-2. A dialog will appear that allows you to select onto which Rhino layer the geometry will bake.
-3. Grouping your baked geometry is a convenient way to manage the instantiated Rhino geometry, particularly if you are creating many objects with Grasshopper.
+![](../../.gitbook/assets/1-1-3_005-baking.png)
 
-\####1.1.3.5. UNITS & TOLERANCES Grasshopper inherits units and tolerances from Rhino. To change the units, type Document Properties in the Rhino command line to access the Document Properties menu. Select Units to change the units and tolerances.
+> 1. 컴포넌트를 마우스 오른쪽 버튼으로 클릭하고 **Bake(베이크)**&#xB97C; 선택하여 실행합니다.
+> 2. 지오메트리를 어떤 라이노 레이어(Layer)에 베이크할 지 선택하는 대화 상자가 나타납니다
+> 3. 베이크된 지오메트리를 그룹화(Grouping)하는 것은 생성된 라이노 지오메트리를 관리하는 편리한 방법이며, 특히 그래스호퍼로 수많은 객체를 생성할 때 더욱 유용합니다.
 
-![IMAGE](../../.gitbook/assets/1-1-3_006-units.png)
+#### 1.1.3.5. 단위 및 허용오차 (UNITS & TOLERANCES)
 
-> Change the units and tolerances in the Rhino Document Properties menu.
+그래스호퍼는 라이노로부터 **단위(units)와 허용 오차(tolerances)** 설정을 그대로 이어받습니다. 단위를 변경하려면, 라이노 명령행(command line)에 **Document Properties(문서 속성)**&#xB97C; 입력하여 문서 속성 메뉴에 액세스하세요. 거기서 **Units(단위)**&#xB97C; 선택하면 단위와 허용 오차를 변경할 수 있습니다.
 
-\####1.1.3.6. REMOTE CONTROL PANEL Once you get the hang of it, Grasshopper is an incredibly powerful and flexible tool which allows you to explore design iterations using a graphic interface. However, if you’re working with a single screen then you may have already noticed that the Grasshopper editor takes up a lot of screen real-estate. Other than constantly zooming in and out and moving windows around your screen, there really isn’t an elegant solution to this problem. That is…until the release of the Remote Control Panel!
+![](../../.gitbook/assets/1-1-3_006-units.png)
 
-The Remote Control Panel (RCP) provides a minimal interface to control your definition without taking up a substantial portion of your screen. The RCP can be instantiated by clicking on the toggle under the View menu of the Main Menu bar. By default, the RCP is blank — meaning it doesn’t contain any information about your current Grasshopper document. To populate the RCP with UI elements like sliders, toggles, and buttons, simply right click on the element and click Publish To Remote Panel. This will create a new group and create a synchronized UI element in the RCP. Changing the value of the element in the RCP will also update the value in the graph, as well as modify any geometry in the viewport which might be dependant on this parameter. You can publish multiple elements and populate a complete interface which can be used to control your file without having the clutter of the visual graph showing up on top of the Rhino viewport.
+> 라이노 문서 속성(Document Properties) 메뉴에서 단위와 허용 오차를 변경하세요.
 
-> Note: The RCP will inherit the UI elements name and use it as the label. It is good practice to update your sliders and toggles with comprehensible and meaningful names. This will translate directly to your RCP making it easier to use.
+#### 1.1.3.6. 리모트 컨트롤 패널
 
-![IMAGE](../../.gitbook/assets/1-1-3_007-remote-control1.png)
+그래스호퍼 사용법에 익숙해지면, 이것이 그래픽 인터페이스를 통해 다양한 디자인 반복을 탐색할 수 있게 해주는 믿을 수 없을 만큼 강력하고 유연한 도구라는 것을 알게 될 것입니다. 하지만 만약 모니터를 하나만 사용하고 있다면, 그래스호퍼 에디터가 화면 공간을 상당히 많이 차지한다는 점을 이미 눈치채셨을 것입니다. 화면을 계속 확대/축소하거나 창을 이리저리 옮기는 것 외에는 딱히 해결책이 없었습니다. 바로... '리모트 컨트롤 패널(Remote Control Panel)'이 출시되기 전까지는 말이죠!
 
-> In order to get a UI element (eg. slider, toggle, button, etc.) to show up in the Remote Control Panel, we have to first publish it.
+리모트 컨트롤 패널(RCP)은 화면의 상당 부분을 차지하지 않으면서도 데피니션을 제어할 수 있는 최소한의 인터페이스를 제공합니다. RCP는 메인 메뉴 바의 View 메뉴 아래에 있는 토글을 클릭하여 실행할 수 있습니다. 기본적으로 RCP는 비어 있는데, 이는 현재 그래스호퍼 문서에 대한 아무런 정보도 포함하고 있지 않음을 의미합니다. 슬라이더, 토글, 버튼과 같은 UI 요소로 RCP를 채우려면, 해당 요소를 마우스 오른쪽 버튼으로 클릭하고 \*\*"Publish To Remote Panel(리모트 패널에 게시)"\*\*을 클릭하기만 하면 됩니다. 이렇게 하면 새로운 그룹이 생성되고 RCP에 동기화된 UI 요소가 만들어집니다. RCP에서 요소의 값을 변경하면 그래프 상의 값도 업데이트될 뿐만 아니라, 이 매개변수에 종속된(dependent) 뷰포트 내의 모든 지오메트리도 수정됩니다. 여러 요소를 게시하여 전체 인터페이스를 구성할 수 있으며, 이를 통해 라이노 뷰포트 위에 시각적 그래프(캔버스)가 어지럽게 나타나지 않도록 하면서 파일을 제어할 수 있습니다.
 
-The RCP UI can also be customized – allowing you to control where objects appear in the interface, the names and colors of different groups. To modify the layout of the RCP you first have to switch from Working Mode (the default RCP view) to Edit Mode. You can enter the Editing Mode by clicking on the green pencil in the upper right hand corner of the RCP. Once in Editing Mode, you can create new UI groups, rearrange elements within groups, add labels, change colors and more. To delete a UI element, simply drag the element outside the border of the RCP. You cannot change the individual values of the parameters if you are in Editing Mode. Instead, you will have to click on the green pencil icon to switch back to the standard Working Mode.
+> 참고: RCP는 UI 요소의 이름을 상속받아 라벨로 사용합니다. 슬라이더와 토글의 이름을 이해하기 쉽고 의미 있는 이름으로 업데이트해 두는 것은 좋은 습관입니다. 이렇게 하면 RCP에 그대로 반영되어 사용하기가 훨씬 더 쉬워집니다.
 
-> _The Remote Control Panel has two modes: Edit Mode (left) which allows you to reorganize the look and feel of the RCP, and Working Mode where you can modify the actual values of the UI elements._  The Remote Control Panel in Edit Mode has an orange background.
+![](../../.gitbook/assets/1-1-3_007-remote-control1.png)
 
-\####1.1.3.7. FILE MANAGEMENT If your Grasshopper file references geometry from Rhino, you must open that same file for the definition to work. Keep your files organized by storing the Grasshopper and Rhino files in the same folder, and giving them related names.
+> UI 요소(예: 슬라이더, 토글, 버튼 등)가 리모트 컨트롤 패널에 나타나게 하려면, 먼저 그것을 게시(publish)해야 합니다.
 
-![IMAGE](../../.gitbook/assets/1-1-3_009-file-management.png)
+RCP UI는 사용자 정의도 가능하여, 인터페이스 내 객체의 위치나 다양한 그룹의 이름 및 색상을 제어할 수 있습니다. RCP의 레이아웃을 수정하려면 먼저 **'작업 모드(Working Mode, 기본 RCP 뷰)'에서 '편집 모드(Edit Mode)'**&#xB85C; 전환해야 합니다. RCP 오른쪽 상단 모서리에 있는 **초록색 연필 아이콘**을 클릭하여 편집 모드로 들어갈 수 있습니다. 편집 모드에 진입하면 새로운 UI 그룹을 생성하거나, 그룹 내 요소를 재배치하고, 라벨을 추가하거나 색상을 변경하는 등의 작업을 할 수 있습니다. UI 요소를 삭제하려면, 해당 요소를 RCP 테두리 밖으로 드래그하기만 하면 됩니다. 편집 모드 상태에서는 매개변수의 개별 값을 변경할 수 없습니다. 대신, 초록색 연필 아이콘을 다시 클릭하여 표준 작업 모드로 전환해야 합니다.
 
-> 1. Project Folder.
+> 리모트 컨트롤 패널에는 두 가지 모드가 있습니다. RCP의 모양과 느낌을 재구성할 수 있는 '편집 모드(왼쪽)'와 UI 요소의 실제 값을 수정할 수 있는 '작업 모드'입니다. 편집 모드일 때 리모트 컨트롤 패널은 주황색 배경을 가집니다.
 
-2. Rhino file.
-3. Grasshopper file.
+#### 1.1.3.7. 파일 관리
 
-\####1.1.3.8. TEMPLATES Creating and specifiying a template file in your Grasshopper preferences is convenient way to set up every new Grasshopper definition you create. The template can include Grasshopper components as well as panels and sketch objects for labeling.
+만약 그래스호퍼 파일이 라이노의 지오메트리를 참조(reference)하고 있다면, 해당 데피니션이 작동하려면 반드시 그(참조 원본인) 라이노 파일을 열어야 합니다. 그래스호퍼 파일과 라이노 파일을 같은 폴더에 저장하고 서로 관련된 이름을 지정하여 파일을 체계적으로 관리하세요.
 
-![IMAGE](../../.gitbook/assets/1-1-3_010-templates.png)
+![](../../.gitbook/assets/1-1-3_009-file-management.png)
 
-> Create a template file and save it
+> 1. 프로젝트 폴더.
+> 2. 라이노 파일.
+> 3. 그래스호퍼 파일.
 
-![IMAGE](../../.gitbook/assets/1-1-3_011-templates2.png)
+#### 1.1.3.8. 템플릿
 
-> 1. In File/Preferences, load the file you just created under Template File. Your template will now be used each time you create a new file.
+그래스호퍼 환경설정(Preferences)에서 템플릿 파일을 생성하고 지정해 두면, 새로운 그래스호퍼 데피니션을 만들 때마다 초기 설정을 편리하게 할 수 있습니다. 템플릿에는 그래스호퍼 컴포넌트뿐만 아니라, 라벨링(주석)을 위한 패널이나 스케치 객체도 포함할 수 있습니다.
+
+![](../../.gitbook/assets/1-1-3_010-templates.png)
+
+> 템플릿 파일을 생성하고 저장하세요.
+
+![](../../.gitbook/assets/1-1-3_011-templates2.png)
+
+> File > Preferences 메뉴로 이동하여, Template File 항목에 방금 생성한 파일을 지정하세요. 이제 새 파일을 만들 때마다 해당 템플릿이 사용됩니다.
