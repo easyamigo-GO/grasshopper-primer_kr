@@ -1,98 +1,119 @@
-# Grasshopper Component Parts
+---
+layout:
+  width: default
+  title:
+    visible: false
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: false
+---
 
-\#####Components are the objects you place on the canvas and connect together with Wiresto form a visual program. Components can represent Rhino Geometry or operationslike Math Functions. Components have inputs and outputs.
+# 1.2.2. 그래스호퍼 컴포넌트의 구조
 
-![IMAGE](../../.gitbook/assets/1-2-2_001-component-parts.png)
+### <mark style="color:$primary;">1.2.2. 그래스호퍼 컴포넌트의 구조</mark>
 
-> 1. The three input parameters of the Circle CNR component.
+컴포넌트는 시각적 프로그램을 구성하기 위해 캔버스에 배치하고 **와이어(Wires)**&#xB85C; 서로 연결하는 객체입니다. 컴포넌트는 라이노 지오메트리(Rhino Geometry)나 수학 함수(Math Functions)와 같은 연산(operations)을 나타낼 수 있습니다. 컴포넌트는 입력(inputs)과 출력(outputs)을 가지고 있습니다.
 
-2. The Circle CNR component area.
-3. The output parameter of the Circle CNR component.
+![](../../.gitbook/assets/1-2-2_001-component-parts.png)
 
-A component requires data in order to perform its actions, and it usually comes up with a result. That is why most components have a set of nested parameters, referred to as Inputs and Outputs, respectively. Input parameters are positioned along the left side, output parameters along the right side.
+> 1. 원(Circle CNR) 컴포넌트의 세 가지 입력 매개변수.
+> 2. 원(Circle CNR) 컴포넌트의 본체 영역.
+> 3. 원(Circle CNR) 컴포넌트의 출력 매개변수.
 
-There are a few Grasshopper components that have inputs but no outputs, or vice versa. When a component doesn’t have inputs or outputs, it will have a jagged edge.
+컴포넌트가 동작을 수행하기 위해서는 데이터가 필요하며, 보통 그에 따른 결과를 도출해 냅니다. 그렇기 때문에 대부분의 컴포넌트는 각각 **입력(Inputs)**&#xACFC; **출력(Outputs)**&#xC774;라고 불리는 일련의 중첩된 매개변수들을 가지고 있습니다. 입력 매개변수는 왼쪽 측면에, 출력 매개변수는 오른쪽 측면에 위치합니다.
 
-![IMAGE](../../.gitbook/assets/1-2-2_002-components-without-outputs.png)
+입력은 있지만 출력은 없는, 혹은 그 반대의 경우인 그래스호퍼 컴포넌트들도 소수 존재합니다. 컴포넌트에 입력이나 출력이 없는 경우, 해당 가장자리는 **톱니 모양(jagged edge)**&#xC744; 띠게 됩니다.
 
-\####1.2.2.1. LABEL VS ICON DISPLAY Every Grasshopper object has a unique icon. These icons are displayed in the center area of the object and correspond to the icons displayed in the component palettes. Objects can also be displayed with text labels. To switch between icon and label display, Select “Draw Icons” from the display menu. You can also select “Draw Full Names” to display the full name of each object as well as its inputs and outputs.
+![](../../.gitbook/assets/1-2-2_002-components-without-outputs.png)
 
-![IMAGE](../../.gitbook/assets/1-2-2_003-label-icon-screenshot.png)
+#### 1.2.2.1. 라벨(LABEL) VS 아이콘(ICON) 디스플레이
 
-> 1. Switch between Icon and Label display.
+모든 그래스호퍼 객체는 고유한 아이콘을 가지고 있습니다. 이 아이콘들은 객체의 중앙 영역에 표시되며, 컴포넌트 팔레트에 표시되는 아이콘과 일치합니다. 객체는 텍스트 라벨(글자)로도 표시될 수 있습니다. 아이콘 표시와 라벨 표시 모드를 전환하려면, Display 메뉴에서 **“Draw Icons(아이콘 그리기)”**&#xB97C; 선택하세요. 또한 **“Draw Full Names(전체 이름 그리기)”**&#xB97C; 선택하면 각 객체의 전체 이름뿐만 아니라 입력 및 출력의 이름까지 모두 표시할 수 있습니다.
 
-2. Display the full name of the component and its inputs and outputs
+![](../../.gitbook/assets/1-2-2_003-label-icon-screenshot.png)
 
-![IMAGE](../../.gitbook/assets/1-2-2_004-label-icon-fullnames.png)
+> 1. 아이콘 표시와 라벨 표시 모드 간 전환
+> 2. 컴포넌트와 그 입력 및 출력의 전체 이름 표시
 
-> 1. The Circle CNR component in Label Display
+![](../../.gitbook/assets/1-2-2_004-label-icon-fullnames.png)
 
-2. The Circle CNR component in Icon Display
-3. The Circle CNR component with full names displayed
+> 1. **라벨 표시(Label Display)** 상태의 원(Circle CNR) 컴포넌트
+> 2. **아이콘 표시(Icon Display)** 상태의 원(Circle CNR) 컴포넌트
+> 3. **전체 이름(Full names)**&#xC774; 표시된 상태의 원(Circle CNR) 컴포넌트
 
-We reccommend using icon display to familiarize yourself with the component icons so you can quickly locate them in the palettes. This will also enable you to understand definitions at a glance. Text labels can be confusing because different components may share the same label.
+컴포넌트 팔레트에서 컴포넌트를 빠르게 찾을 수 있도록, **아이콘 표시(Icon Display)**&#xB97C; 사용하여 아이콘에 익숙해지는 것을 권장합니다. 이렇게 하면 데피니션을 한눈에 파악하는 데도 도움이 됩니다. 서로 다른 컴포넌트라도 같은 라벨(이름)을 공유하는 경우가 있어, 텍스트 라벨은 혼동을 줄 수 있기 때문입니다.
 
-![IMAGE](../../.gitbook/assets/1-2-2_005-circle-label-vs-icon.png)
+![](../../.gitbook/assets/1-2-2_005-circle-label-vs-icon.png)
 
-> Circle CNR and Circle 3pt have the same label, but different icons.
+> Circle CNR(중심점, 법선, 반지름으로 원 그리기\*과 Circle 3pt(세 점으로 원 그리기)는 동일한 'Circle'이라는 라벨을 가지고 있지만 아이콘 표시 상태에서는 서로 다른 아이콘을 가지고 있습니다.
 
-One feature that can help you familiarize yourself with the location of components in the palettes is holding down Ctrl + Alt and clicking on an existing component on the canvas. This will reveal its location in the palette.
+컴포넌트 팔레트에서 컴포넌트의 위치를 익히는 데 도움이 되는 기능 중 하나는, Ctrl + Alt 키를 누른 상태에서 캔버스에 있는 기존 컴포넌트를 클릭하는 것입니다. 이렇게 하면 팔레트 내에서 해당 컴포넌트의 위치가 어디인지 화살표로 알려줍니다.
 
-![IMAGE](../../.gitbook/assets/1-2-2_006-reveal-location.png)
+![](../../.gitbook/assets/1-2-2_006-reveal-location.png)
 
-\####1.2.2.2. COMPONENT HELP Right clicking an object and selecting “Help” from the drop-down menu will open a Grasshopper help window. The help window contains a more detailled description of the object, a list of inputs and outputs, as well as remarks.
+#### 1.2.2.2. 컴포넌트 도움말
 
-![IMAGE](../../.gitbook/assets/1-2-2_007-component-help.png)
+객체를 마우스 오른쪽 버튼으로 클릭하고 드롭다운 메뉴에서 **“Help(도움말)”**&#xB97C; 선택하면 그래스호퍼 도움말 창이 열립니다. 도움말 창에는 해당 객체에 대한 더 상세한 설명, 입력 및 출력 목록, 그리고 비고(remarks)가 포함되어 있습니다.
 
-> 1. Grasshopper help window for the Point parameter
+![](../../.gitbook/assets/1-2-2_007-component-help.png)
 
-2. The remarks in the help window give additional insight about the point parameter.
+> 1. Point(점) 매개변수에 대한 그래스호퍼 도움말 창
+> 2. 도움말 창의 비고(remarks)는 점 매개변수에 대한 추가적인 정보를를 제공합니다
 
-\####1.2.2.3. TOOL TIPS Component inputs are expecting to receive certain types of data, for example a Component might indicate that you should connect a point or plane to its input. When you hover your mouse over the individual parts of a Component object, you’ll see different tooltips that indicate the particular type of the sub-object currently under the mouse. Tooltips are quite informative since they tell you both the type and the data of individual parameters.
+#### 1.2.2.3. 툴 팁
 
-![IMAGE](../../.gitbook/assets/1-2-2_008-tool-tips.png)
+컴포넌트 입력부는 특정 유형의 데이터를 원합니다. 예를 들어, 어떤 컴포넌트는 입력부에 점(point)이나 평면(plane)을 연결해야 한다고 표시될 수 있습니다. 컴포넌트 객체의 각 부분 위에 마우스를 올리면(hover), 현재 마우스 아래에 있는 하위 객체(sub-object)의 특정 유형을 나타내는 다양한 **툴팁(tooltips)**&#xC744; 볼 수 있습니다. 툴팁은 개별 매개변수의 **데이터 유형(type)**&#xACFC; **실제 데이터 값(data)**&#xC744; 모두 알려주기 때문에 매우 유익한 정보를 제공합니다.
 
-> 1. Header of the tooltip shows the icon for the input type, the name of the Component, the label for the input, and the input type again in text format.
+![](../../.gitbook/assets/1-2-2_008-tool-tips.png)
 
-2. The flain language description of what the input is for the Component.
-3. Any values defined for the input - either locally or from its connected wire.
-4. The header of the output tooltip provides the same detail os for inputs, but for the corresponding output.
-5. The result of the component's action.
+> 1. 툴팁의 헤더는 입력 유형 아이콘, 컴포넌트 이름, 입력 라벨, 그리고 입력 유형을 텍스트 형식으로 다시 보여줍니다.
+> 2. 해당 입력이 컴포넌트에서 무엇을 위한 것인지에 대한 알기 쉬운(plain language) 설명입니다.
+> 3. 로컬로 정의되었거나 연결된 와이어로부터 들어오는 등, 입력에 대해 정의된 모든 값입니다.
+> 4. 출력 툴팁의 헤더는 입력과 동일한 상세 정보를 제공하지만, 해당하는 출력에 대한 내용을 담고 있습니다.
+> 5. 컴포넌트 동작의 결과입니다.
 
-\####1.2.2.4. CONTEXT POPUP MENUS All objects on the Canvas have their own context menus that expose their settings and details. You can access this context menu by right-clicking on the center area of each component. Inputs and outputs each have their own context menus which can be accessed by right-clicking them.
+#### 1.2.2.4. 컨텍스트 팝업 메뉴
 
-![IMAGE](../../.gitbook/assets/1-2-2_009-context-menus-a.png)
+캔버스에 있는 모든 객체는 설정과 세부 정보를 보여주는 고유한 컨텍스트 메뉴를 가지고 있습니다. 각 컴포넌트의 중앙 영역을 마우스 오른쪽 버튼으로 클릭하여 이 메뉴에 액세스할 수 있습니다. 입력(Inputs)과 출력(Outputs) 또한 각각 고유한 컨텍스트 메뉴를 가지고 있으며, 해당 부분을 우클릭하여 액세스할 수 있습니다.
 
-> 1. Component context menu.
+![](../../.gitbook/assets/1-2-2_009-context-menus-a.png)
 
-2. Editable text field that lists the name of the object.
-3. Preview flag - indicates whether or not the geometry produced by this object will be visible in the Rhino viewports. Switching off preview will speed up both the Rhino viewport frame-rate and the time taken for a solution.
-4. Runting warnings - lists warnings that are hindering the functioning of the component.
+> 1. 컴포넌트 컨텍스트 메뉴
+> 2. 이름 입력 필드: 객체의 이름이 표시되며, 사용자가 직접 수정할 수 있는 텍스트 필드입니다.
+> 3. 미리보기 플래그(Preview flag): 이 객체가 생성한 지오메트리가 라이노 뷰포트에 보일지 여부를 나타냅니다. 미리보기를 끄면(Switching off) 라이노 뷰포트의 프레임 속도가 빨라지고, 솔루션 계산에 걸리는 시간도 단축됩니다.
+> 4. 런타임 경고(Runtime warnings): 컴포넌트의 기능을 방해하고 있는 경고 목록을 보여줍니다. (오류나 경고가 있을 때만 나타남)
 
-![IMAGE](../../.gitbook/assets/1-2-2_010-context-menus-b.png)
+![](../../.gitbook/assets/1-2-2_010-context-menus-b.png)
 
-> 1. C input context menu.
+> 1. C 입력 컨텍스트 메뉴
+> 2. Set one Point / Set Multiple Points (점 하나 또는 여러 점 설정): 라이노 뷰포트에서 참조할 지오메트리를 선택할 수 있게 해줍니다.
+> 3. Manage Point collection (점 컬렉션 관리): 점 컬렉션에서 점을 추가하거나 제거하고, 각 점에 대한 세부 정보를 볼 수 있는 대화 상자를 엽니다.
+> 4. 컬렉션에 항목 추가
+> 5. 선택 항목 삭제
 
-2. Set one or multiple points - allows you to select reference geometry in the Rhino viewport.
-3. Manage Point collection - opens a dialog that allows you to add or remove points from the point collection and view information about each point.
-4. Add item to collection.
-5. Delete selection.
+#### 1.2.2.5. 줌 가능한 사용자 인터페이스
 
-\####1.2.2.5. ZOOMABLE USER INTERFACE Some components can be modified to increase the number of inputs or outputs through the Zoomable User Interface (ZUI). By zooming in on the component on the canvas, an additional set of options will appear which allows you add or remove Inputs or Outputs to that component. The Addition component allows you to add inputs, representing additional items for the addition operation.
+일부 컴포넌트는 **ZUI(줌 가능한 사용자 인터페이스)**&#xB97C; 통해 입력이나 출력의 개수를 늘리도록 수정할 수 있습니다. 캔버스 상의 컴포넌트를 **확대(zoom-in)**&#xD558;면, 해당 컴포넌트에 입력이나 출력을 추가하거나 제거할 수 있는 추가적인 옵션 세트가 나타납니다. 예를 들어 덧셈(Addition) 컴포넌트의 경우, 더하기 연산을 수행할 추가 항목을 나타내는 입력단을 더 늘릴 수 있습니다.
 
-![IMAGE](../../.gitbook/assets/1-2-2_011-zoomable-ui.png)
+![](../../.gitbook/assets/1-2-2_011-zoomable-ui.png)
 
-> 1. Click the + sign to add an Input.
+> 1. +기호를 클릭하여 입력을 추가합니다.
+> 2. -기호를 클릭하여 입력을 추가합니다.
 
-2. Click the - sign to remove an Input.
+_(역자 주 : 패널(Panel)의 ZUI는 최신 버전 라이노에서는 나타나지 않음)_\
+~~패널(Panel) 컴포넌트 또한 줌 가능한 사용자 인터페이스를 가지고 있습니다. 패널은 마치 포스트잇(Post-It™) 스티커와 같습니다. 이를 통해 문서에 간단한 주석이나 설명을 추가할 수 있습니다. 메뉴를 통하거나 패널 표면을 더블 클릭하여 텍스트를 변경할 수 있습니다. 또한 패널은 다른 곳에서 데이터를 받아와 표시할 수도 있습니다. 만약 어떤 출력을 패널에 연결하면, 해당 매개변수의 내용을 실시간으로 볼 수 있습니다. 그래스호퍼의 모든 데이터는 이와 같은 방식으로 확인 가능합니다. 패널을 확대(zoom-in)하면 배경, 폰트, 기타 속성을 변경할 수 있는 메뉴가 나타납니다. 이 옵션들은 패널을 마우스 오른쪽 버튼으로 클릭했을 때도 사용할 수 있습니다.~~
 
-The panel component also has a zoomable user interface. A Panel is like a Post-It™ sticker. It allows you to add little remarks or explanations to a Document. You can change the text through the menu or by double-clicking the panel surface. Panels can also receive and display data from elsewhere. If you plug an output into a Panel, you can see the contents of that parameter in real-time. All data in Grasshopper can be viewed in this way. When you zoom in on a panel, a menu appears allowing you to change the background, font, and other attributes. These options are also available when you right-click the panel
+![](../../.gitbook/assets/1-2-2_012-zoomable-panel.png)
 
-![IMAGE](../../.gitbook/assets/1-2-2_012-zoomable-panel.png)
-
-> 1. Drag grips to adjust panel margins.
-
-2. Increase or reduce the font size of the panel content.
-3. Change the alignment of panel content.
-4. Select a font for ponel conent.
-5. Select a color for the panel background. You can set a new default color for your panels by right clicking the panel and selecting "Set Defaut Color".
+> 1. ~~그립을 드래그하여 패널의 여백(margins)을 조정합니다.~~
+> 2. ~~패널 내용의 글꼴 크기를 키우거나 줄입니다.~~
+> 3. ~~패널 내용의 정렬(alignment) 방식을 변경합니다. (왼쪽, 가운데, 오른쪽 정렬 등)~~
+> 4. ~~패널 내용에 사용할 글꼴(font)을 선택합니다.~~
+> 5. ~~패널의 배경색을 선택합니다. 패널을 마우스 오른쪽 버튼으로 클릭하고 "Set Default Color(기본 색상으로 설정)"를 선택하면, 앞으로 생성될 패널들의 새로운 기본 색상을 설정할 수 있습니다.~~

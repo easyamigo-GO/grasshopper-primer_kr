@@ -15,7 +15,7 @@ layout:
     visible: false
 ---
 
-# 1.2.1. Grasshopper Object Types
+# 1.2.1. 그래스호퍼 오브젝트 유형
 
 ### <mark style="color:$primary;">1.2.1. 그래스호퍼 오브젝트 유형</mark>
 
@@ -54,27 +54,29 @@ layout:
 
 ![](../../.gitbook/assets/1-2-1_004-parameter-warning.png)
 
-A component is always a more involved object, since we have to understand and then coordinate what its inputs and outputs are. Like parameters, a component with warnings is displayed as orange. Remember, warnings aren’t necessarily bad, it usually just means that Grasshopper is alerting you to a potential problem in your definition.
+컴포넌트는 항상 매개변수보다 더 복잡한 객체입니다. 입력과 출력이 무엇인지 이해하고 조정해야 하기 때문입니다. 매개변수와 마찬가지로, \*\*경고(warnings)\*\*가 있는 컴포넌트는 주황색으로 표시됩니다. 기억하세요, 경고가 반드시 나쁜 것은 아닙니다. 대개는 그래스호퍼가 데피니션상의 잠재적인 문제에 대해 사용자에게 알리고 있다는 의미일 뿐입니다.
 
 ![](../../.gitbook/assets/1-2-1_005-component-warning.png)
 
-A component which contains neither warnings nor errors is shown in light gray.
+입력 매개변수 C가 데이터를 수집하는 데 실패했습니다.
 
-A component whose preview has been disabled is shown in a slightly darker gray. There are two ways to disable a component’s preview. First, simply right-click on the component and toggle the preview button. To disable the preview for multiple components at the same time, first select the desired components and then toggle the disable preview icon (blindfolded man) by right clicking anywhere on the canvas.
+경고나 오류가 없는 컴포넌트는 밝은 회색으로 표시됩니다. (정상 상태) 미리보기가 비활성화된(Preview Disabled) 컴포넌트는 약간 더 어두운 회색으로 표시됩니다.
 
-A component that has been disabled is shown in a dull gray. To disable a component you may right-click on the component and toggle the disable button, or you may select the desired components, right click anywhere on the canvas and select Disable. Disabled components stop sending data to downstream components.
+컴포넌트는 약간 더 어두운 회색으로 표시됩니다. 컴포넌트의 미리보기를 끄는 데는 두 가지 방법이 있습니다. 첫째, 컴포넌트를 마우스 오른쪽 버튼으로 클릭하고 미리보기 버튼을 토글하는 것입니다. 여러 컴포넌트의 미리보기를 동시에 끄려면, 먼저 원하는 컴포넌트들을 선택한 다음 캔버스 아무 곳이나 우클릭하여 \*\*'미리보기 끄기 아이콘(눈을 가린 사람 모양)'\*\*을 토글하면 됩니다.
 
-A component which has been selected will be shown in a light green color. If the selected component has generated some geometry within the Rhino scene, this will also turn green to give you some visual feedback.
+**칙칙한 회색(dull gray)**&#xC73C;로 표시됩니다. 컴포넌트를 비활성화하려면 해당 컴포넌트를 우클릭하고 'Enabled(활성화)' 버튼을 토글하거나, 원하는 컴포넌트들을 선택한 뒤 캔버스를 우클릭하고 Disable을 선택하면 됩니다. 비활성화된 컴포넌트는 후속(downstream) 컴포넌트로 데이터를 보내는 것을 중단합니다. (아예 작동을 멈춘 상태)
 
-A component which contains at least 1 error is displayed in red. The error can come either from the component itself or from one of its inputs or outputs.
+**선택된(Selected) 컴포넌트**는 연한 초록색으로 표시됩니다. 만약 선택된 컴포넌트가 라이노 장면 내에 지오메트리를 생성했다면, 시각적 피드백을 주기 위해 그 지오메트리 또한 초록색으로 변합니다.
+
+적어도 하나의 **오류(Error)**&#xB97C; 포함하는 컴포넌트는 빨간색으로 표시됩니다. 오류는 컴포넌트 자체에서 발생하거나, 입력 또는 출력 중 하나에서 발생할 수 있습니다.&#x20;
 
 ![](../../.gitbook/assets/1-2-1_006-object-colors.png)
 
-> 1. A parameter with no warnings or erros
-> 2. A parameter with warnings
-> 3. A component with warnings
-> 4. A component with no warnings or errors
-> 5. A component with preview disabled
-> 6. A component that has been disabled
-> 7. A selected component
-> 8. A component with an error
+> 1. 경고나 오류가 없는 매개변수(parameter)
+> 2. 경고가 있는 매개변수(parameter)
+> 3. 경고가 있는 컴포넌트(component)
+> 4. 경고나 오류가 없는 컴포넌트(component)
+> 5. 미리보기가 비활성화된 컴포넌트(component)
+> 6. 비 활성화된 컴포넌트(component)
+> 7. 선택된 컴포넌트(component)
+> 8. 오류가 있는 컴포넌트(component)
